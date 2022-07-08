@@ -1,0 +1,148 @@
+@theme "catppuccin-mocha"
+
+configuration {
+  font: "JetBrainsMono Nerd Font 20";
+
+  show-icons: false;
+  icon-theme: "papirus";
+
+  window-format: "{t}";
+ 
+  drun {
+    display-name: " ";
+  }
+
+  run {
+    display-name: " ";
+  }
+
+  window {
+    display-name: " ";
+    hide-active-window: true;
+  }
+
+  timeout {
+    delay:  10;
+    action: "kb-cancel";
+  }
+
+  kb-delete-entry: "Control+q";
+
+  kb-select-1: "Control+1";
+  kb-select-2: "Control+3";
+  kb-select-3: "Control+5";
+  kb-select-4: "Control+7";
+  kb-select-5: "Control+9";
+}
+
+* {
+  background-color: @base;
+  text-color:       @text;
+  border:           0;
+  margin:           0;
+  padding:          0;
+  spacing:          2px;
+}
+
+window {
+  width:        30%;
+  border:       3px;
+  border-color: @blue;
+  padding:      5px;
+}
+
+mainbox {
+  background-color: @mantle;
+  children:         [inputbar, listview];
+}
+
+inputbar {
+  background-color: @mantle;
+  children:         [prompt, entry, num-filtered-rows, textbox-num-sep, num-rows, case-indicator];
+}
+
+prompt {
+  background-color: @mantle;
+  padding:          12px;
+}
+
+entry {
+  background-color: @mantle;
+  padding:          12px 3px;
+}
+
+num-filtered-rows {
+  background-color: @mantle;
+  text-color:       @subtext0;
+  padding:          12px 0;
+  expand:           false;
+}
+
+textbox-num-sep {
+  background-color: @mantle;
+  text-color:       @subtext0;
+  padding:          12px 0;
+  expand:           false;
+  str:              "/";
+}
+
+num-rows {
+  background-color: @mantle;
+  text-color:       @subtext0;
+  padding:          12px 0;
+  expand:           false;
+}
+
+case-indicator {
+  background-color: @mantle;
+  text-color:       @subtext0;
+  padding:          12px 0;
+  expand:           false;
+}
+
+listview {
+  fixed-height: false;
+  lines:        10;
+}
+
+element {
+  background-color: @base;
+  text-color:       @subtext1;
+  children:         [element-text];
+}
+
+element-icon {
+  background-color: inherit;
+  padding:          10px 10px;
+  size:             3ch;
+}
+
+element-text {
+  background-color: inherit;
+  text-color:       inherit;
+  padding:          12px 0;
+  highlight:        bold #89b4fa;
+}
+
+element normal.urgent {
+  text-color: @teal;
+}
+
+element alternate.urgent {
+  text-color: @teal;
+}
+
+element selected.normal {
+  background-color: @surface0;
+  text-color:       @blue;
+}
+
+element selected.active {
+  background-color: @surface0;
+  text-color:       @blue;
+}
+
+element selected.urgent {
+  background-color: @surface0;
+  text-color:       @blue;
+}

@@ -1,0 +1,27 @@
+@theme "catppuccin-mocha"
+
+configuration {
+    timeout {
+        delay:  10;
+        action: "kb-cancel";
+    }
+
+    kb-delete-entry: "Control+q";
+
+    kb-select-1: "Control+1";
+    kb-select-2: "Control+3";
+    kb-select-3: "Control+5";
+    kb-select-4: "Control+7";
+    kb-select-5: "Control+9";
+}
+
+* {
+    font: "JetBrains Mono Nerd Font 20";
+
+    background:     var(mantle);
+    background-alt: var(surface0);
+    foreground:     var(text);
+    selected:       var(blue);
+    active:         var(green);
+    urgent:         var(teal);
+}

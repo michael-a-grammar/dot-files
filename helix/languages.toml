@@ -1,0 +1,13 @@
+[language-server.expert]
+command = "/home/mbowen/bin/expert_linux_amd64"
+args = ["--stdio"]
+
+[[language]]
+auto-format = true
+formatter = { command = "mix format" }
+name = "elixir"
+language-servers = ["expert"]
+
+[[language]]
+name = "heex"
+language-servers = ["expert"]

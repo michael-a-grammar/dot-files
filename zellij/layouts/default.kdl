@@ -1,0 +1,45 @@
+layout {
+    default_tab_template {
+        children
+
+        pane size=1 borderless=true {
+            plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {             
+                format_left   "{mode}#[bg=#181825] {tabs}"
+                format_center "#[bg=#181825,fg=#89b4fa]󰫈 #[bg=#181825,fg=#a6adc8]{session}"
+                format_space  "#[bg=#181825]"
+
+                format_hide_on_overlength "true"
+                format_precedence         "crl"
+
+                hide_frame_for_single_pane "true"
+
+                mode_locked       "#[bg=#181825,fg=#89b4fa,bold]  "
+                mode_normal       "#[bg=#181825,fg=#94e2d5,bold]  "
+                mode_pane         "#[bg=#181825,fg=#fab387,bold]  "
+                mode_tab          "#[bg=#181825,fg=#fab387,bold] 󰓩 "
+                mode_resize       "#[bg=#181825,fg=#fab387,bold] 󰩨 "
+                mode_move         "#[bg=#181825,fg=#fab387,bold]  "
+                mode_scroll       "#[bg=#181825,fg=#fab387,bold]  "
+                mode_search       "#[bg=#181825,fg=#fab387,bold]  "
+                mode_enter_search "#[bg=#181825,fg=#eba0ac,bold] 󰑕  "
+                mode_rename_pane  "#[bg=#181825,fg=#eba0ac,bold] 󰑕  "
+                mode_rename_tab   "#[bg=#181825,fg=#eba0ac,bold] 󰑕 󰓩 "
+                mode_session      "#[bg=#181825,fg=#fab387,bold] 󰫈 "
+
+                tab_normal            "#[bg=#181825,fg=#a6adc8,bold]  {name}{floating_indicator}  "
+                tab_normal_fullscreen "#[bg=#181825,fg=#a6adc8,bold]  {name}{fullscreen_indicator}  "
+                tab_normal_sync       "#[bg=#181825,fg=#a6adc8,bold]  {name}{sync_indicator}  "
+
+                tab_active            "#[bg=#181825,fg=#313244,bold]#[bg=#313244,fg=#89b4fa,bold] {name}{floating_indicator} #[bg=#181825,fg=#313244,bold]"
+                tab_active_fullscreen "#[bg=#181825,fg=#313244,bold]#[bg=#313244,fg=#89b4fa,bold] {name}{fullscreen_indicator} #[bg=#181825,fg=#313244,bold]"
+                tab_active_sync       "#[bg=#181825,fg=#313244,bold]#[bg=#313244,fg=#89b4fa,bold] {name}{sync_indicator} #[bg=#181825,fg=#313244,bold]"
+
+                tab_separator "#[bg=#181825] "
+
+                tab_sync_indicator       "  "
+                tab_fullscreen_indicator " 󰊓 "
+                tab_floating_indicator   " 󰹙 "
+            }
+        }
+    }
+}

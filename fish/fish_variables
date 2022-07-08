@@ -1,0 +1,17 @@
+SETUVAR --export BAT_PAGER:ov\x20\x2dF\x20\x2dH3
+SETUVAR --export EDITOR:hx
+SETUVAR --export ELIXIR_EDITOR:hx
+SETUVAR --export ERL_AFLAGS:\x2dkernel\x20shell_history\x20enabled
+SETUVAR --export FZF_DEFAULT_COMMAND:rg\x20\x2d\x2dhidden\x20\x2dl\x20\x22\x22
+SETUVAR --export FZF_DEFAULT_OPTS:\x2d\x2dcolor\x3dbg\x2b\x3a\x23313244\x2cbg\x3a\x231E1E2E\x2cspinner\x3a\x23F5E0DC\x2chl\x3a\x23F38BA8\x20\x2d\x2dcolor\x3dfg\x3a\x23CDD6F4\x2cheader\x3a\x23F38BA8\x2cinfo\x3a\x23CBA6F7\x2cpointer\x3a\x23F5E0DC\x20\x2d\x2dcolor\x3dmarker\x3a\x23B4BEFE\x2cfg\x2b\x3a\x23CDD6F4\x2cprompt\x3a\x23CBA6F7\x2chl\x2b\x3a\x23F38BA8\x20\x2d\x2dcolor\x3dselected\x2dbg\x3a\x2345475A\x20\x2d\x2dcolor\x3dborder\x3a\x23313244\x2clabel\x3a\x23CDD6F4
+SETUVAR --export KERL_BUILD_DOCS:yes
+SETUVAR --export KERL_INSTALL_HTMLDOCS:yes
+SETUVAR --export KERL_INSTALL_MANPAGES:yes
+SETUVAR --export MANPAGER:ov\x20\x2d\x2dsection\x2ddelimiter\x20\x27\x5e\x5b\x5e\x5cs\x5d\x27\x20\x2d\x2dsection\x2dheader
+SETUVAR --export PF_ASCII:Catppuccin
+SETUVAR --export PF_INFO:ascii\x20os\x20host\x20kernel\x20uptime\x20pkgs\x20memory\x20shell\x20editor\x20wm\x20de\x20palette
+SETUVAR --export fzf_directory_opts:\x2d\x2dbind\x3dctrl\x2dt\x3aexecute\x28hx\x20\x7b\x7d\x20\x26\x3e\x20/dev/tty\x29\x2cctrl\x2dd\x3areload\x28fd\x20\x2d\x2dtype\x20directory\x20\x2d\x2dcolor\x3dalways\x20\x2d\x2dhidden\x20\x2d\x2dexclude\x3d\x2egit\x29\x2cctrl\x2df\x3areload\x28fd\x20\x2d\x2dtype\x20file\x20\x2d\x2dcolor\x3dalways\x20\x2d\x2dhidden\x20\x2d\x2dexclude\x3d\x2egit\x29
+SETUVAR --export fzf_fd_opts:\x2d\x2dhidden\x1e\x2d\x2dexclude\x3d\x2egit
+SETUVAR --export fzf_history_time_format:\x25d\x2d\x25m\x2d\x25y\x1e\x25H\x3a\x25M
+SETUVAR --export fzf_preview_dir_cmd:eza\x1e\x2d\x2dcolor\x3dalways
+SETUVAR fish_key_bindings:fish_hybrid_key_bindings

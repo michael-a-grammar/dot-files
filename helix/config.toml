@@ -1,0 +1,250 @@
+theme = "catppuccin_mocha"
+
+[editor]
+auto-completion           = false
+auto-format               = true
+auto-info                 = true
+auto-pairs                = false
+auto-save                 = true
+bufferline                = "always"
+color-modes               = true
+completion-replace        = true
+completion-trigger-len    = 4
+continue-comments         = false
+cursorcolumn              = true
+cursorline                = true
+end-of-line-diagnostics   = "disable"
+idle-timeout              = 400
+indent-heuristic          = "tree-sitter"
+jump-label-alphabet       = "ntesirlpufywhdcxmgoakvqzjb"
+line-number               = "relative"
+popup-border              = "all"
+preview-completion-insert = true
+rulers                    = [120]
+scroll-lines              = 2
+shell                     = ["fish", "-c"]
+text-width                = 400
+undercurl                 = false
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = true
+
+[editor.indent-guides]
+character   = "|"
+render      = true
+skip-levels = 1
+
+[editor.inline-diagnostics]
+cursor-line     = "disable"
+max-diagnostics = 10
+max-wrap        = 20
+other-lines     = "disable"
+prefix-len      = 1
+
+[editor.lsp]
+display-inlay-hints       = false
+display-messages	        = false
+display-progress-messages = true
+
+[editor.smart-tab]
+enable         = false
+supersede-menu = false
+
+[editor.soft-wrap]
+enable             = false
+max-indent-retain  = 40
+max-wrap           = 20
+wrap-at-text-width = true
+wrap-indicator     = "↪"
+
+[editor.statusline]
+left   = ["mode", "spinner", "selections", "primary-selection-length",
+                 "position", "position-percentage", "total-line-numbers", "register"] 
+center = ["separator", "file-name"]
+right  = []
+
+separator = "󰚄"
+
+[editor.statusline.mode]
+insert = "󱃱 "
+normal = " "
+select = " "
+
+[editor.whitespace]
+render = "none"
+
+[editor.whitespace.characters]
+space   = "·"
+nbsp    = "⍽"
+tab     = "→"
+newline = "⏎"
+tabpad  = "·"
+
+[keys.insert]
+C-backspace = "completion"
+
+[keys.insert.j]
+j = "normal_mode"
+
+[keys.normal]
+C-i = "jump_forward"
+C-o = "jump_backward"
+C-q = ":write-quit-all"
+
+D = ["move_char_left", "delete_selection"]
+V = ["extend_line_below", "select_mode"]
+X = "select_line_above"
+
+[keys.select]
+D = ["move_char_left", "delete_selection"]
+V = ["extend_line_below"]
+X = "select_line_above"
+
+[keys.normal.g]
+n = ["select_mode", "goto_line_start", "normal_mode"]
+o = ["select_mode", "goto_line_end",   "normal_mode"]
+
+[keys.select.g]
+n = ["goto_line_start"]
+o = ["goto_line_end"]
+
+[keys.normal.z]
+f = "scroll_down"
+p = "scroll_up"
+
+F = "page_down"
+P = "page_up"
+
+[keys.select.z]
+f = "scroll_down"
+p = "scroll_up"
+
+F = "page_down"
+P = "page_up"
+
+[keys.normal.Z]
+f = "scroll_down"
+p = "scroll_up"
+
+F = "page_down"
+P = "page_up"
+
+[keys.select.Z]
+f = "scroll_down"
+p = "scroll_up"
+
+F = "page_down"
+P = "page_up"
+
+[keys.normal.space]
+"," = "buffer_picker"
+"." = "file_explorer_in_current_buffer_directory"
+
+space = "file_picker"
+tab   = ":buffer-previous"
+S-tab = ":buffer-next"
+
+e = "file_picker_in_current_buffer_directory"
+
+[keys.select.space]
+","   = "buffer_picker"
+"." = "file_explorer_in_current_buffer_directory"
+
+space = "file_picker"
+tab   = ":buffer-previous"
+S-tab = ":buffer-next"
+
+e = "file_picker_in_current_buffer_directory"
+
+[keys.normal.backspace]
+":"     = "ensure_selections_forward"
+";"     = "flip_selections"
+"_"     = "merge_consecutive_selections"
+"minus" = "merge_selections"
+","     = "remove_primary_selection"
+"."     = "repeat_last_motion"
+"("     = "rotate_selection_contents_backward"
+")"     = "rotate_selection_contents_forward"
+'*'     = 'search_selection'
+"!"     = "shell_append_output"
+"|"     = "shell_pipe_to"
+"`"     = "switch_to_uppercase"
+
+c = "change_selection_noyank"
+d = "delete_selection_noyank"
+s = "split_selection_on_newline"
+u = "earlier"
+x = "shrink_to_line_bounds"
+
+C = "copy_selection_on_prev_line"
+I = 'select_all_children'
+J = "join_selections_space"
+K = "remove_selections"
+U = "later"
+
+[keys.select.backspace]
+":"     = "ensure_selections_forward"
+";"     = "flip_selections"
+"_"     = "merge_consecutive_selections"
+"minus" = "merge_selections"
+","     = "remove_primary_selection"
+"."     = "repeat_last_motion"
+"("     = "rotate_selection_contents_backward"
+")"     = "rotate_selection_contents_forward"
+'*'     = 'search_selection'
+"!"     = "shell_append_output"
+"|"     = "shell_pipe_to"
+"`"     = "switch_to_uppercase"
+
+c = "change_selection_noyank"
+d = "delete_selection_noyank"
+s = "split_selection_on_newline"
+u = "earlier"
+x = "shrink_to_line_bounds"
+
+C = "copy_selection_on_prev_line"
+I = 'select_all_children'
+J = "join_selections_space"
+K = "remove_selections"
+U = "later"
+
+[keys.normal.backspace.backspace]
+a = "increment"
+c = "toggle_comments"
+s = "save_selection"
+x = "decrement"
+
+[keys.select.backspace.backspace]
+a = "increment"
+c = "toggle_comments"
+s = "save_selection"
+x = "decrement"
+
+[keys.normal."'"]
+a = 'select_all_siblings'
+z = ":config-open"
+
+E = 'select_all_children'
+Z = ":config-reload"
+
+n = "select_prev_sibling"
+e = "shrink_selection"
+i = "expand_selection"
+o = "select_next_sibling"
+
+[keys.select."'"]
+a = 'select_all_siblings'
+z = ":config-open"
+
+E = 'select_all_children'
+Z = ":config-reload"
+
+n = "select_prev_sibling"
+e = "shrink_selection"
+i = "expand_selection"
+o = "select_next_sibling"
