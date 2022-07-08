@@ -1,0 +1,39 @@
+[submodule "alacritty/catppuccin"]
+	path = alacritty/catppuccin
+	url = https://github.com/michael-a-grammar/catppuccin-alacritty
+[submodule "bat/catppuccin"]
+	path = bat/catppuccin
+	url = https://github.com/catppuccin/bat
+[submodule "delta/catppuccin"]
+	path = delta/catppuccin
+	url = https://github.com/catppuccin/delta
+[submodule "dunst/catppuccin"]
+	path = dunst/catppuccin
+	url = https://github.com/catppuccin/dunst
+[submodule "fzf/catppuccin"]
+	path = fzf/catppuccin
+	url = https://github.com/catppuccin/fzf
+[submodule "helix/catppuccin"]
+	path = helix/catppuccin
+	url = https://github.com/michael-a-grammar/catppuccin-helix
+[submodule "i3/catppuccin"]
+	path = i3/catppuccin
+	url = https://github.com/catppuccin/i3
+[submodule "lazygit/catppuccin"]
+	path = lazygit/catppuccin
+	url = https://github.com/michael-a-grammar/catppuccin-lazygit
+[submodule "nushell/catppuccin"]
+	path = nushell/catppuccin
+	url = https://github.com/catppuccin/nushell
+[submodule "polybar/catppuccin"]
+	path = polybar/catppuccin
+	url = https://github.com/catppuccin/polybar
+[submodule "rofi/catppuccin"]
+	path = rofi/catppuccin
+	url = https://github.com/michael-a-grammar/catppuccin-rofi
+[submodule "superfile/catppuccin"]
+	path = superfile/catppuccin
+	url = https://github.com/catppuccin/superfile
+[submodule "television/catppuccin"]
+	path = television/catppuccin
+	url = https://github.com/catppuccin/television

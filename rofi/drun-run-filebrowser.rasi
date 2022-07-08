@@ -1,0 +1,334 @@
+@import "shared.rasi"
+
+configuration {
+    modi:       "drun,run,filebrowser";
+    show-icons: false;
+
+    drun {
+        display-name:   " ";
+        display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+    }
+
+    run {
+        display-name: " ";
+    }
+
+    filebrowser {
+        display-name:      " ";
+        directory:         "$HOME";
+        directories-first: true;
+        show-hidden:       true;
+        sorting-method:    "name";
+    }
+}
+
+* {
+    background-colour:    var(background);
+    foreground-colour:    var(foreground);
+    alternate-background: var(background-alt);
+
+    border-colour: var(selected);
+    handle-colour: var(selected);
+
+    normal-background: var(background);
+    normal-foreground: var(foreground);
+
+    active-background: var(active);
+    active-foreground: var(background);
+
+    urgent-background: var(urgent);
+    urgent-foreground: var(background);
+
+    selected-normal-background: var(background-alt);
+    selected-normal-foreground: var(selected);
+
+    selected-active-background: var(urgent);
+    selected-active-foreground: var(background);
+
+    selected-urgent-background: var(active);
+    selected-urgent-foreground: var(background);
+
+    alternate-normal-background: var(background);
+    alternate-normal-foreground: var(foreground);
+
+    alternate-active-background: var(active);
+    alternate-active-foreground: var(background);
+
+    alternate-urgent-background: var(urgent);
+    alternate-urgent-foreground: var(background);
+}
+
+window {
+    background-color: @background-colour;
+    width:            1800px;
+    margin:           0px;
+    padding:          0px;
+    border:           0px solid;
+    border-radius:    20px;
+    border-color:     @border-colour;
+    cursor:           "default";
+
+    enabled:      true;
+    fullscreen:   false;
+    x-offset:     0px;
+    y-offset:     0px;
+    location:     center;
+    anchor:       center;
+    transparency: "real";
+}
+
+mainbox {
+    background-color: transparent;
+    margin:           0px;
+    padding:          40px;
+    spacing:          10px;
+    border:           0px solid;
+    border-radius:    0px 0px 0px 0px;
+    border-color:     @border-colour;
+
+    enabled:  true;
+    children: [ "inputbar", "message", "listview", "mode-switcher" ];
+}
+
+inputbar {
+    background-color: transparent;
+    text-color:       @foreground-colour;
+    margin:           0px;
+    padding:          0px;
+    spacing:          10px;
+    border:           0px solid;
+    border-radius:    0px;
+    border-color:     @border-colour;
+
+    enabled:  true;
+    children: [ "prompt", "textbox-prompt-colon", "entry" ];
+}
+
+prompt {
+    background-color: inherit;
+    text-color:       inherit;
+
+    enabled: true;
+}
+
+textbox-prompt-colon {
+    background-color: inherit;
+    text-color:       inherit;
+
+    enabled: true;
+    expand:  false;
+    str:     "::";
+}
+
+entry {
+    background-color: inherit;
+    text-color:       inherit;
+    cursor:           text;
+
+    enabled:           true;
+    placeholder:       "Search...";
+    placeholder-color: inherit;
+}
+
+num-filtered-rows {
+    background-color: inherit;
+    text-color:       inherit;
+
+    enabled: true;
+    expand:  false;
+}
+
+textbox-num-sep {
+    background-color: inherit;
+    text-color:       inherit;
+
+    enabled: true;
+    expand:  false;
+    str:     "/";
+}
+
+num-rows {
+    background-color: inherit;
+    text-color:       inherit;
+
+    enabled: true;
+    expand:  false;
+}
+
+case-indicator {
+    background-color: inherit;
+    text-color:       inherit;
+    enabled:          true;
+}
+
+listview {
+    background-color: transparent;
+    text-color:       @foreground-colour;
+    margin:           0px;
+    padding:          0px;
+    spacing:          5px;
+    border:           0px solid;
+    border-radius:    0px;
+    border-color:     @border-colour;
+    cursor:           "default";
+
+    enabled:       true;
+    layout:        vertical;
+    fixed-height:  true;
+    fixed-columns: true;
+    columns:       2;
+    lines:         10;
+    reverse:       false;
+    scrollbar:     true;
+    cycle:         true;
+    dynamic:       true;
+}
+
+scrollbar {
+    background-color: @alternate-background;
+
+    border-radius: 10px;
+    handle-width:  10px;
+    handle-color:  @handle-colour;
+}
+
+element {
+    background-color: transparent;
+    text-color:       @foreground-colour;
+    margin:           0px;
+    padding:          5px 10px;
+    spacing:          10px;
+    border:           0px solid;
+    border-radius:    20px;
+    border-color:     @border-colour;
+    cursor:           pointer;
+
+    enabled: true;
+}
+
+element normal.normal {
+    background-color: var(normal-background);
+    text-color:       var(normal-foreground);
+}
+
+element normal.urgent {
+    background-color: var(urgent-background);
+    text-color:       var(urgent-foreground);
+}
+
+element normal.active {
+    background-color: var(active-background);
+    text-color:       var(active-foreground);
+}
+
+element selected.normal {
+    background-color: var(selected-normal-background);
+    text-color:       var(selected-normal-foreground);
+}
+
+element selected.urgent {
+    background-color: var(selected-urgent-background);
+    text-color:       var(selected-urgent-foreground);
+}
+
+element selected.active {
+    background-color: var(selected-active-background);
+    text-color:       var(selected-active-foreground);
+}
+
+element alternate.normal {
+    background-color: var(alternate-normal-background);
+    text-color:       var(alternate-normal-foreground);
+}
+
+element alternate.urgent {
+    background-color: var(alternate-urgent-background);
+    text-color:       var(alternate-urgent-foreground);
+}
+
+element alternate.active {
+    background-color: var(alternate-active-background);
+    text-color:       var(alternate-active-foreground);
+}
+
+element-icon {
+    background-color: transparent;
+    text-color:       inherit;
+    cursor:           inherit;
+
+    size: 24px;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    highlight:        inherit;
+    cursor:           inherit;
+    vertical-align:   0.5;
+    horizontal-align: 0.0;
+}
+
+mode-switcher {
+    background-color: transparent;
+    text-color:       @foreground-colour;
+    margin:           0px;
+    padding:          0px;
+    spacing:          10px;
+    border:           0px solid;
+    border-radius:    0px;
+    border-color:     @border-colour;
+
+    enabled: true;
+}
+
+button {
+    background-color: @background;
+    text-color:       inherit;
+    padding:          5px 10px;
+    border:           0px solid;
+    border-radius:    20px;
+    border-color:     @border-colour;
+    cursor:           pointer;
+}
+
+button selected {
+    background-color: var(selected-normal-background);
+    text-color:       var(selected-normal-foreground);
+}
+
+message {
+    background-color: transparent;
+    text-color:       @foreground-colour;
+    margin:           0px;
+    padding:          0px;
+    border:           0px solid;
+    border-radius:    0px 0px 0px 0px;
+    border-color:     @border-colour;
+
+    enabled: true;
+}
+
+textbox {
+    background-color:  @alternate-background;
+    text-color:        @foreground-colour;
+    highlight:         none;
+    padding:           5px 10px;
+    border:            0px solid;
+    border-radius:     20px;
+    border-color:      @border-colour;
+
+    placeholder-color: @foreground-colour;
+    vertical-align:    0.5;
+    horizontal-align:  0.0;
+    blink:             true;
+    markup:            true;
+}
+
+error-message {
+    background-color: @background-colour;
+    text-color:       @foreground-colour;
+    padding:          10px;
+    border:           2px solid;
+    border-radius:    20px;
+    border-color:     @border-colour;
+}

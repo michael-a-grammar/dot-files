@@ -1,0 +1,192 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$jobs\
+$directory\
+$git_branch\
+$elixir\
+$elm\
+$erlang\
+$ruby\
+$rust\
+$cmd_duration\
+$status\
+$line_break\
+$character\
+"""
+
+right_format = """
+$git_metrics\
+$git_status \
+$time \
+$battery\
+"""
+
+command_timeout = 10000
+palette         = "catppuccin_mocha"
+
+[character]
+error_symbol              = "[[󰋔](red)](red)"
+success_symbol            = "[[󰣐](blue)](blue)"
+vicmd_symbol              = "[[󱃱](teal)](teal)"
+vimcmd_replace_one_symbol = "[[󰩖](yellow)](yellow)"
+vimcmd_replace_symbol     = "[[󰩖](peach)](peach)"
+vimcmd_visual_symbol      = "[[](mauve)](mauve)"
+
+[cmd_duration]
+style = "bold blue"
+
+[directory]
+format            = "[$read_only]($read_only_style)[$path]($style) "
+read_only         = " "
+style             = "bold blue"
+truncation_length = 4
+
+[aws]
+disabled = true
+
+[battery]
+disabled           = true
+charging_symbol    = "󰂅"
+discharging_symbol = "󰢝"
+empty_symbol       = "󱃍"
+format             = "[$symbol $percentage]($style)"
+full_symbol        = "󱈏"
+unknown_symbol     = "󰂑"
+
+[[battery.display]]
+style     = "bold lavender"
+threshold = 100
+
+[elixir]
+format = "via [$symbol($version on  $otp_version )]($style)"
+style  = "bold lavender"
+symbol = " "
+
+[git_branch]
+style             = "bold mauve"
+symbol            = " "
+truncation_length = 24
+
+[git_metrics]
+added_style        = "bold lavender"
+deleted_style      = "bold lavender"
+disabled           = true
+format             = "[](bold lavender)[ 󰐕$added]($added_style) [󰍴$deleted]($deleted_style) "
+only_nonzero_diffs = false
+
+[git_status]
+ahead      = "󱞿 ${count} "
+behind     = "󱞣 ${count} "
+conflicted = "󰶇 ${count} "
+deleted    = "󰛌 ${count} "
+disabled   = true
+diverged   = "󱞿 ${ahead_count} 󱞣${behind_count} "
+format     = "[$ahead_behind$all_status]($style)"
+modified   = " ${count} "
+renamed    = " ${count} "
+staged     = " ${count} "
+stashed    = "󰩪 ${count} "
+style      = "bold lavender"
+untracked  = "󱜸 ${count} "
+up_to_date = " "
+
+[hostname]
+format = '[$ssh_symbol$hostname]($style) in '
+ssh_only   = false
+ssh_symbol = ' '
+style      = 'bold red'
+
+[jobs]
+style  = "bold blue"
+symbol = "󱕣 "
+
+[lua]
+style  = "bold lavender"
+symbol = " "
+
+[ruby]
+style  = "bold lavender"
+symbol = " "
+
+[rust]
+style  = "bold lavender"
+symbol = " "
+
+[status]
+disabled              = false
+format                = "[$symbol]($style)"
+map_symbol            = true
+not_executable_symbol = "󰞷 "
+not_found_symbol      = "󰮗 "
+pipestatus            = true
+pipestatus_format     = "$pipestatus[󰁚 $symbol]($style)"
+pipestatus_separator  = "[󰁚 ]($style)"
+sigint_symbol         = "󰋮 "
+signal_symbol         = "󰢿 "
+style                 = "bold blue"
+success_symbol        = "󰈺 "
+symbol                = " "
+
+[time]
+disabled        = true
+format          = "[󰅐 $time]($style) "
+style           = "bold teal"
+time_format     = "%R 󰭧 %F"
+utc_time_offset = "+1"
+
+[palettes.catppuccin_latte]
+rosewater = "#dc8a78"
+flamingo  = "#dd7878"
+pink      = "#ea76cb"
+mauve     = "#8839ef"
+red       = "#d20f39"
+maroon    = "#e64553"
+peach     = "#fe640b"
+yellow    = "#df8e1d"
+green     = "#40a02b"
+teal      = "#179299"
+sky       = "#04a5e5"
+sapphire  = "#209fb5"
+blue      = "#1e66f5"
+lavender  = "#7287fd"
+text      = "#4c4f69"
+subtext1  = "#5c5f77"
+subtext0  = "#6c6f85"
+overlay2  = "#7c7f93"
+overlay1  = "#8c8fa1"
+overlay0  = "#9ca0b0"
+surface2  = "#acb0be"
+surface1  = "#bcc0cc"
+surface0  = "#ccd0da"
+base      = "#eff1f5"
+mantle    = "#e6e9ef"
+crust     = "#dce0e8"
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo  = "#f2cdcd"
+pink      = "#f5c2e7"
+mauve     = "#cba6f7"
+red       = "#f38ba8"
+maroon    = "#eba0ac"
+peach     = "#fab387"
+yellow    = "#f9e2af"
+green     = "#a6e3a1"
+teal      = "#94e2d5"
+sky       = "#89dceb"
+sapphire  = "#74c7ec"
+blue      = "#89b4fa"
+lavender  = "#b4befe"
+text      = "#cdd6f4"
+subtext1  = "#bac2de"
+subtext0  = "#a6adc8"
+overlay2  = "#9399b2"
+overlay1  = "#7f849c"
+overlay0  = "#6c7086"
+surface2  = "#585b70"
+surface1  = "#45475a"
+surface0  = "#313244"
+base      = "#1e1e2e"
+mantle    = "#181825"
+crust     = "#11111b"

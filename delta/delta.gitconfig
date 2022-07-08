@@ -1,0 +1,16 @@
+[include]
+  path = ~/.config/delta/catppuccin.gitconfig
+
+[delta]
+  features = catppuccin-mocha
+  file-style = yellow
+  navigate = true
+  side-by-side = true
+
+[delta "ov-diff"]
+  features = catppuccin-mocha
+  pager = ov -F --section-delimiter '^(commit|added:|removed:|renamed:|Δ)' --section-header --pattern '•'
+
+[delta "ov-log"]
+  features = catppuccin-mocha
+  pager = ov -F --section-delimiter '^commit' --section-header-num 3

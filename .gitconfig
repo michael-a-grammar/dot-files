@@ -1,0 +1,57 @@
+[include]
+  path = ~/private.gitconfig
+
+[include]
+  path = ~/.config/delta/delta.gitconfig
+
+[core]
+  autocrlf = input
+  editor = hx
+  pager = delta --pager='ov -F'
+
+[pull]
+  rebase = true
+
+[push]
+  autoSetupRemote = true
+
+[color]
+  ui = auto
+
+[interactive]
+  diffFilter = delta --color-only
+
+[diff]
+  tool = nvim
+
+[difftool "nvim"]
+  cmd = nvim -d $LOCAL $REMOTE
+  prompt = false
+
+[merge]
+  conflictstyle = diff3
+  tool = nvim
+
+[mergetool "nvim"]
+  cmd = "nvim -d -c \"wincmd l\" -c \"norm ]c\" \"$LOCAL\" \"$MERGED\" \"$REMOTE\""
+  keepBackup = false
+  prompt = false
+
+
+[alias]
+  dl = -c diff.external=difft log -p --ext-diff
+  ds = -c diff.external=difft show --ext-diff
+  dd = -c diff.external=difft diff
+
+[pager]
+  diff = delta --features ov-diff
+  log  = delta --features ov-log
+  show = delta --pager='ov -F --header 3'
+
+[credential "https://github.com"]
+	helper = 
+	helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
+
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
