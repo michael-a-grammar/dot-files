@@ -1,0 +1,14 @@
+[user]
+  name = milque
+  email = 5898731+milquetoastable@users.noreply.github.com
+[pull]
+  rebase = true
+[core]
+  autocrlf = input
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[url "https://github.com/dracula/"]
+  insteadOf = dracula://

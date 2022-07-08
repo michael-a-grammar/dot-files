@@ -1,0 +1,210 @@
+set clipboard+=unnamed
+set gdefault
+set hlsearch
+set ignorecase
+set iskeyword
+set incsearch
+set number
+set relativenumber
+set startofline
+set showmode
+set showcmd
+set smartcase
+set timeout
+set timeoutlen=6000
+set wrapscan
+
+set ideamarks
+set idearefactormode=keep
+set ideajoin
+set ideawrite=all
+set ideavimsupport=dialog,singleline
+
+let mapleader=" "
+
+"set easymotion
+set NERDTree
+set surround
+set multiple-cursors
+set commentary
+set ReplaceWithRegister
+set argtextobj
+set exchange
+set textobj-entire
+set highlightedyank
+
+"let g:EasyMotion_do_mapping=0
+"map <leader>, <plug>(easymotion-prefix)
+
+sethandler a:vim
+
+imap jj <esc>
+
+map <leader><leader> <action>(ShowIntentionActions)
+
+map <leader>! <action>(Terminal.OpenInTerminal)
+map <leader>@ <action>(VSO.Select.Work.Items)
+
+map <leader>/i :set incsearch<cr>
+map <leader>/t :nohlsearch<cr>
+map <leader>/s :s/
+map <leader>// :%s/
+map <leader>/I :set noincsearch<cr>
+
+map <leader>0 <action>(ActivateCommitToolWindow)
+map <leader>1 <action>(ActivateProjectToolWindow)
+map <leader>2 <action>(ActivateFavoritesToolWindow)
+map <leader>3 <action>(ActivateFindToolWindow)
+map <leader>4 <action>(ActivateRunToolWindow)
+map <leader>5 <action>(ActivateDebugToolWindow)
+map <leader>6 <action>(ActivatenpmToolWindow)
+map <leader>7 <action>(ActivateStructureToolWindow)
+map <leader>8 <action>(ActivateServicesToolWindow)
+map <leader>9 <action>(ActivateVersionControlToolWindow)
+
+map <leader>a <action>(GotoAction)
+
+map <leader>A <action>(RunAnything)
+
+map <leader>cc <action>(CommentByLineComment)
+map <leader>ch <action>(CollapseDocComments)
+map <leader>cp <action>(CommentByBlockComment)
+map <leader>cs <action>(ExpandDocComments)
+
+map <leader>C <action>(CollapseAllRegions)
+
+map <leader>da <action>(ViewBreakpoints)
+map <leader>dd <action>(ToggleLineBreakpoint)
+map <leader>de <action>(EditBreakpoint)
+map <leader>df <action>(Debugger.RemoveAllBreakpointsInFile)
+map <leader>dD <action>(Debugger.RemoveAllBreakpoints)
+
+map <leader>D <action>(ExpandAllRegions)
+
+map <leader>ed <action>(ShowErrorDescription)
+map <leader>ee <action>(ActivateErrorsInSolutionToolWindow)
+map <leader>en <action>(GotoNextError)
+map <leader>ep <action>(GotoPreviousError)
+
+map <leader>E <action>(EditorCodeBlockEnd)
+
+map <leader>fc <action>(CopyReferencePopup)
+map <leader>ff <action>(ShowNavBar)
+map <leader>fl <action>(RecentLocations)
+map <leader>fn <action>(NewElementSamePlace)
+map <leader>fr <action>(RecentFiles)
+map <leader>fs <action>(FileStructurePopup)
+map <leader>ft <action>(SelectIn)
+map <leader>fR <action>(RecentChangedFiles)
+
+map <leader>F <action>(Forward)
+
+map <leader>h <action>(QuickJavaDoc)
+
+map <leader>H <action>(ParameterInfo)
+
+map <leader>gc <action>(Vcs.Show.Local.Changes)
+map <leader>gd <action>(Compare.SameVersion)
+map <leader>gg <action>(Git.ContextMenu)
+map <leader>gl <action>(Vcs.Show.Log)
+map <leader>gn <action>(VcsShowNextChangeMarker)
+map <leader>gp <action>(VcsShowPrevChangeMarker)
+map <leader>gH <action>(LocalHistory.ShowLocalHistory)
+
+map <leader>G <action>(Generate)
+
+map <leader>if <action>(ToggleFullScreen)
+map <leader>iz <action>(ToggleZenMode)
+
+map <leader>I <action>(ImplementMethods)
+
+map <leader>l <action>(LocateInSolutionView)
+
+map <leader>L <action>(JumpToLastChange)
+
+map <leader>ma <action>(XDebugger.AttachToProcess)
+map <leader>mc <action>(CleanSolutionAction)
+map <leader>md <action>(Debug)
+map <leader>me <action>(EditRunConfigurations)
+map <leader>mm <action>(BuildCurrentProject)
+map <leader>mr <action>(RebuildSolutionAction)
+map <leader>ms <action>(Run)
+map <leader>mM <action>(BuildSolutionAction)
+map <leader>mS <action>(ChooseRunConfiguration)
+
+map <leader>nc <action>(GotoImplementation)
+map <leader>nd <action>(GotoDeclaration)
+map <leader>nh <action>(TypeHierarchy)
+map <leader>ni <action>(QuickImplementations)
+map <leader>nm <action>(GoToMenu)
+map <leader>np <action>(GotoSuperMethod)
+map <leader>nn <action>(ReSharperNavigateTo)
+map <leader>nu <action>(ShowUsages)
+map <leader>nU <action>(FindUsages)
+
+map <leader>N <action>(MethodDown)
+
+map <leader>O <action>(OverrideMethods)
+
+map <leader>pm <action>(ManageRecentProjects)
+map <leader>pn <action>(NextProjectWindow)
+map <leader>pp <action>(PreviousProjectWindow)
+
+map <leader>P <action>(Back)
+
+map <leader>rc <action>(SilentCodeCleanup)
+map <leader>rf <action>(ReformatCode)
+map <leader>rm <action>(CodeMenu)
+map <leader>rn <action>(RenameElement)
+map <leader>rp <action>(IntroduceParameter)
+map <leader>rr <action>(Refactorings.QuickListPopupAction)
+map <leader>rs <action>(ChangeSignature)
+
+map <leader>sc <action>(GotoClass)
+map <leader>sf <action>(GotoFile)
+map <leader>sp <action>(FindInPath)
+map <leader>ss <action>(SearchEverywhere)
+map <leader>st <action>(FindInPath)
+map <leader>sy <action>(GotoSymbol)
+
+map <leader>S <action>(EditorCodeBlockStart)
+
+map <leader>td <action>(CloseEditor)
+map <leader>te ggVGx<cr>
+map <leader>tn <action>(NextTab)
+map <leader>tp <action>(PreviousTab)
+map <leader>tr ggVGp<cr>
+map <leader>tt <action>(Switcher)
+map <leader>tu <action>(ReopenClosedTab)
+map <leader>ty :%y<cr>
+map <leader>tD <action>(CloseAllEditorsButActive)
+
+map <leader>T <action>(MethodUp)
+
+map <leader>uu <action>(RiderUnitTestQuickListPopupAction)
+
+map <leader>ve <action>(EditorActions)
+map <leader>vl <action>(SurroundWithLiveTemplate)
+map <leader>vs <action>(EditorSelectWord)
+map <leader>vv <c-v>
+map <leader>vS <action>(EditorUnSelectWord)
+
+map <leader>wc <action>(ChangeSplitOrientation)
+map <leader>wd <action>(StretchSplitToBottom)
+map <leader>wh <action>(HideAllWindows)
+map <leader>wl <action>(StretchSplitToLeft)
+map <leader>wn <action>(NextSplitter)
+map <leader>wp <action>(PreviousSplitter)
+map <leader>wr <action>(StretchSplitToRight)
+map <leader>ws <action>(SplitHorizontally)
+map <leader>wt <action>(StretchSplitToTop)
+map <leader>wu <action>(Unsplit)
+map <leader>wv <action>(SplitVertically)
+map <leader>ww <action>(JumpToLastWindow)
+map <leader>wU <action>(UnsplitAll)
+
+map <leader>za :action
+map <leader>zf <action>(VimFindActionIdAction)
+map <leader>zl :actionlist
+map <leader>zs <action>(ShowSettings)
+map <leader>zz :source ~/.ideavimrc<cr>

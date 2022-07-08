@@ -1,0 +1,20 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+command_timeout = 5000
+
+[aws]
+disabled = true
+
+[elixir]
+format = 'via [$symbol($version on OTP $otp_version )]($style)'
+symbol = 'Elixir '
+
+[git_branch]
+style = 'bold green'
+truncation_length = 12
+
+[nodejs]
+disabled = true
+
+[package]
+disabled = true
