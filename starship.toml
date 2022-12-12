@@ -1,13 +1,16 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-command_timeout = 5000
+command_timeout = 10000
 
 [aws]
 disabled = true
 
+[docker_context]
+disabled = true
+
 [elixir]
-format = 'via [$symbol($version on OTP $otp_version )]($style)'
-symbol = 'Elixir '
+format = 'via [$symbol($version on  $otp_version )]($style)'
+symbol = ' '
 
 [git_branch]
 style = 'bold green'

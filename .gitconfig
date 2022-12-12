@@ -1,6 +1,6 @@
 [user]
-  name = milque
-  email = 5898731+milquetoastable@users.noreply.github.com
+  name = mike-a-grammar
+  email = 5898731+michael-a-grammar@users.noreply.github.com
 [pull]
   rebase = true
 [core]
@@ -12,3 +12,11 @@
   required = true
 [url "https://github.com/dracula/"]
   insteadOf = dracula://
+[diff]
+  tool = nvim
+[merge]
+  tool = nvim
+[difftool]
+  prompt = false
+[github]
+  user = mike-a-grammar

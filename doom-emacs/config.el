@@ -116,6 +116,18 @@
 (setq global-subword-mode t
       global-visual-line-mode t)
 
+(setq initial-major-mode 'elixir-mode)
+
+(setq initial-scratch-message "\
+#  ❄ Prime Your Potions ❄
+defmodule Test
+  def test_fn() do
+  end
+end
+
+Test.test_fn()
+")
+
 (custom-set-faces!
   `(flycheck-error :underline (:style line :color ,(doom-color 'red)))
   `(flycheck-warning :underline (:style line :color ,(doom-color 'yellow)))
@@ -147,11 +159,11 @@
 (after! doom-modeline
   (setq doom-modeline-bar-width 3
         doom-modeline-height 25
-        doom-modeline-github t
-        doom-modeline-indent-info t
+        ;; doom-modeline-github t
+        ;; doom-modeline-indent-info t
         ;; doom-modeline-major-mode-icon t
-        doom-modeline-persp-name t
-        doom-modeline-persp-icon t
+        ;; doom-modeline-persp-name t
+        ;; doom-modeline-persp-icon t
         doom-modeline-vcs-max-length 15
         all-the-icons-scale-factor 1.0
         display-time-24hr-format t
@@ -161,10 +173,11 @@
   (display-time-mode 1)
 
   (unless (string-match-p "^Power AC" (battery))
-    (display-battery-mode 1)))
+    (display-battery-mode 1))
+  (global-hide-mode-line-mode))
 
 (after! elixir-mode
-  (set-popup-rule! "^\\*Alchemist-IEx" :quit nil :size 0.3)
+  (set-popup-rule! "^\\*Alchemist-IEx" :quit nil :size 0.4)
   (add-hook! 'elixir-mode-hook (modify-syntax-entry ?_ "w"))
   (setq alchemist-hooks-compile-on-save nil
         alchemist-hooks-test-on-save nil
@@ -175,7 +188,10 @@
         lsp-elixir-enable-test-lenses nil
         lsp-elixir-fetch-deps nil
         lsp-elixir-signature-after-complete t
-        lsp-elixir-suggest-specs nil))
+        lsp-elixir-suggest-specs nil)
+
+  (add-hook 'alchemist-iex-mode-hook (lambda ()
+                                       (company-mode 0))))
 
 (after! evil
   (setq evil-escape-key-sequence "jj"
