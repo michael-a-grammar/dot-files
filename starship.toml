@@ -16,8 +16,17 @@ symbol = ' '
 style = 'bold green'
 truncation_length = 12
 
+[lua]
+symbol = ' '
+
 [nodejs]
 disabled = true
 
 [package]
 disabled = true
+
+[ruby]
+symbol = ' '
+
+[rust]
+symbol = ' '

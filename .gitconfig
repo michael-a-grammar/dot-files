@@ -1,17 +1,19 @@
 [user]
   name = mike-a-grammar
   email = 5898731+michael-a-grammar@users.noreply.github.com
+[push]
+	autoSetupRemote = true
 [pull]
   rebase = true
 [core]
   autocrlf = input
+[color]
+	ui = auto
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
-[url "https://github.com/dracula/"]
-  insteadOf = dracula://
 [diff]
   tool = nvim
 [merge]
@@ -20,3 +22,5 @@
   prompt = false
 [github]
   user = mike-a-grammar
+[url "https://github.com/dracula/"]
+  insteadOf = dracula://

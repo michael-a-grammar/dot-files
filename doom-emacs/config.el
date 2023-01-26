@@ -6,8 +6,8 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
-(setq user-full-name ""
-      user-mail-address "")
+(setq user-full-name "michael-a-grammar"
+      user-mail-address "5898731+michael-a-grammar@users.noreply.github.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
@@ -75,9 +75,9 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(setq doom-font (font-spec :family "Hasklug Nerd Font Mono" :size 16)
+(setq doom-font (font-spec :family "Hasklug Nerd Font Mono" :size 14)
       doom-unicode-font doom-font
-      doom-big-font (font-spec :family "Hasklug Nerd Font Mono" :size 18)
+      doom-big-font (font-spec :family "Hasklug Nerd Font Mono" :size 16)
       doom-variable-pitch-font (font-spec :family "Hasklug Nerd Font Mono"))
 
 (setq-default delete-by-moving-to-trash t)
@@ -190,8 +190,11 @@ Test.test_fn()
         lsp-elixir-signature-after-complete t
         lsp-elixir-suggest-specs nil)
 
-  (add-hook 'alchemist-iex-mode-hook (lambda ()
-                                       (company-mode 0))))
+  ;; (add-hook 'alchemist-iex-mode-hook (lambda ()
+                                       (company-mode 0))
+
+(after! lua-mode
+  (setq-default tab-width 2))
 
 (after! evil
   (setq evil-escape-key-sequence "jj"
@@ -229,6 +232,8 @@ Test.test_fn()
         lsp-ui-doc-max-width 300
         lsp-headerline-breadcrumb-enable nil
         lsp-headerline-breadcrumb-enable-diagnostics nil
+        lsp-headerline-breadcrumb-icons-enable nil
+        lsp-headerline-breadcrumb-enable-symbol-numbers t
         lsp-ui-sideline-show-code-actions nil
         lsp-ui-sideline-show-diagnostics nil))
 
