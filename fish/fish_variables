@@ -1,7 +1,8 @@
-# This file contains fish universal variable definitions.
-# VERSION: 3.0
 SETUVAR --export EDITOR:nvim
 SETUVAR --export ELIXIR_EDITOR:nvim
 SETUVAR --export ERL_AFLAGS:\x2dkernel\x20shell_history\x20enabled
 SETUVAR --export FZF_DEFAULT_COMMAND:rg\x20\x2d\x2dhidden\x20\x2dl\x20\x22\x22
 SETUVAR --export K9S_EDITOR:nvim
+SETUVAR --export KERL_BUILD_DOCS:yes
+SETUVAR --export KERL_INSTALL_HTMLDOCS:yes
+SETUVAR --export KERL_INSTALL_MANPAGES:yes
