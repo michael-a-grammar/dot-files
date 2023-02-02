@@ -7,7 +7,9 @@ function abbreviations
   abbr --add k 'kitty @'
   abbr --add v 'nvim .'
 
-  abbr --add cat 'bat'
+  abbr --add cat  'bat'
+  abbr --add crg  'batgrep --no-highlight'
+  abbr --add diff 'batdiff'
 
   abbr --add g  'git'
   abbr --add ga 'git add .'
@@ -22,9 +24,9 @@ function abbreviations
   abbr --add dc 'docker-compose --profile host up'
   abbr --add dp 'docker system prune --all --force'
 
-  abbr --add 'ef' 'mix format'
-  abbr --add 'ei' 'iex -S mix'
-  abbr --add 'ep' 'iex -S mix phx.server'
-  abbr --add 'es' 'mix setup'
-  abbr --add 'eu' 'mix deps.get'
+  abbr --add ef 'mix format'
+  abbr --add ei 'iex -S mix'
+  abbr --add ep 'iex -S mix phx.server'
+  abbr --add es 'mix setup'
+  abbr --add eu 'mix deps.get'
 end
