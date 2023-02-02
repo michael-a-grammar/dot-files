@@ -75,10 +75,10 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(setq doom-font (font-spec :family "Hasklug Nerd Font Mono" :size 14)
+(setq doom-font (font-spec :family "JetBrainsMono Nerd Font Mono" :size 16)
       doom-unicode-font doom-font
-      doom-big-font (font-spec :family "Hasklug Nerd Font Mono" :size 16)
-      doom-variable-pitch-font (font-spec :family "Hasklug Nerd Font Mono"))
+      doom-big-font (font-spec :family "JetBrainsMono Nerd Font Mono" :size 18)
+      doom-variable-pitch-font (font-spec :family "JetBrainsMono Nerd Font Mono"))
 
 (setq-default delete-by-moving-to-trash t)
 (setq-default window-combination-resize t)
