@@ -1,14 +1,14 @@
 [user]
-  name = mike-a-grammar
+  name = michael-a-grammar
   email = 5898731+michael-a-grammar@users.noreply.github.com
 [push]
-	autoSetupRemote = true
+  autoSetupRemote = true
 [pull]
   rebase = true
 [core]
   autocrlf = input
 [color]
-	ui = auto
+  ui = auto
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
@@ -21,6 +21,6 @@
 [difftool]
   prompt = false
 [github]
-  user = mike-a-grammar
+  user = michael-a-grammar
 [url "https://github.com/dracula/"]
   insteadOf = dracula://
