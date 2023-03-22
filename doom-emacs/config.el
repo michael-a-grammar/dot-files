@@ -32,7 +32,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-tomorrow-night)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -75,37 +75,37 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(setq doom-font (font-spec :family "JetBrainsMono Nerd Font Mono" :size 16)
-      doom-unicode-font doom-font
-      doom-big-font (font-spec :family "JetBrainsMono Nerd Font Mono" :size 18)
+(setq doom-font                (font-spec :family "JetBrainsMono Nerd Font Mono" :size 16)
+      doom-unicode-font        doom-font
+      doom-big-font            (font-spec :family "JetBrainsMono Nerd Font Mono" :size 18)
       doom-variable-pitch-font (font-spec :family "JetBrainsMono Nerd Font Mono"))
 
-(setq-default delete-by-moving-to-trash t)
-(setq-default window-combination-resize t)
-(setq-default x-stretch-cursor t)
+(setq-default delete-by-moving-to-trash t
+              window-combination-resize t
+              x-stretch-cursor          t)
 
-(setq auto-save-default t
-      password-cache-expiry nil
+(setq auto-save-default        t
+      password-cache-expiry    nil
       truncate-string-ellipsis "…"
-      undo-limit 6710886400
-      undo-strong-limit 100663296
-      undo-outer-limit 1006632960)
+      undo-limit               6710886400
+      undo-strong-limit        100663296
+      undo-outer-limit         1006632960)
 
 (fset 'undo-auto-amalgamate 'ignore)
 
-(setq scroll-error-top-bottom t
-      scroll-margin 2
-      scroll-step 1
-      scroll-conservatively scroll-margin
-      scroll-preserve-screen-position t)
+(setq scroll-error-top-bottom           t
+      scroll-preserve-screen-position   t
+      scroll-margin                     2
+      scroll-step                       1
+      scroll-conservatively scroll-margin)
 
 (setq mouse-wheel-inhibit-click-time nil
-      mouse-wheel-progressive-speed nil)
+      mouse-wheel-progressive-speed  nil)
 
 (setq next-error-recenter (quote (4)))
 
-(setq fast-but-imprecise-scrolling nil
-      jit-lock-defer-time 0)
+(setq jit-lock-defer-time            0
+      fast-but-imprecise-scrolling nil)
 
 (setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING))
 
@@ -113,7 +113,7 @@
 
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
-(setq global-subword-mode t
+(setq global-subword-mode     t
       global-visual-line-mode t)
 
 (setq initial-major-mode 'elixir-mode)
@@ -129,46 +129,46 @@ Test.test_fn()
 ")
 
 (custom-set-faces!
-  `(flycheck-error :underline (:style line :color ,(doom-color 'red)))
-  `(flycheck-warning :underline (:style line :color ,(doom-color 'yellow)))
-  `(flyspell-duplicate :underline (:style line :color ,(doom-color 'yellow)))
-  `(flyspell-incorrect :underline (:style line :color ,(doom-color 'red)))
-  `(flyspell-info :underline (:style line :color ,(doom-color 'green)))
+  `(flycheck-error         :underline (:style line :color ,(doom-color 'red)))
+  `(flycheck-warning       :underline (:style line :color ,(doom-color 'yellow)))
+  `(flyspell-duplicate     :underline (:style line :color ,(doom-color 'yellow)))
+  `(flyspell-incorrect     :underline (:style line :color ,(doom-color 'red)))
+  `(flyspell-info          :underline (:style line :color ,(doom-color 'green)))
   `(writegood-weasels-face :underline (:style line :color ,(doom-color 'orange))))
 
 (defadvice! prompt-for-buffer (&rest _)
   :after '(evil-window-split evil-window-vsplit)
   (consult-buffer))
 
-(setq deft-directory "~/notes")
-(setq +treemacs-git-mode 'deferred)
+(setq deft-directory     "~/notes"
+      +treemacs-git-mode 'deferred)
 
 (after! centaur-tabs
-  (setq centaur-tabs-style "alternate"
-        centaur-tabs-set-close-button nil
-        centaur-tabs-show-count t
+  (setq centaur-tabs-style               "alternate"
+        centaur-tabs-set-close-button    nil
+        centaur-tabs-show-count          t
         centaur-tabs-show-new-tab-button nil))
 
 (after! company
-  (setq company-box-scrollbar nil
-        company-idle-delay 1))
+  (setq company-idle-delay    1
+        company-box-scrollbar nil))
 
 (after! deft
   (setq deft-default-extension "md"))
 
 (after! doom-modeline
-  (setq doom-modeline-bar-width 3
-        doom-modeline-height 25
-        ;; doom-modeline-github t
-        ;; doom-modeline-indent-info t
-        ;; doom-modeline-major-mode-icon t
-        ;; doom-modeline-persp-name t
-        ;; doom-modeline-persp-icon t
-        doom-modeline-vcs-max-length 15
-        all-the-icons-scale-factor 1.0
-        display-time-24hr-format t
-        display-time-day-and-date t
-        display-time-load-average-threshold 5)
+  (setq doom-modeline-bar-width             3
+        doom-modeline-height                25
+        doom-modeline-github                t
+        doom-modeline-indent-info           t
+        doom-modeline-major-mode-icon       t
+        doom-modeline-persp-name            t
+        doom-modeline-persp-icon            t
+        doom-modeline-vcs-max-length        15
+        display-time-24hr-format            t
+        display-time-day-and-date           t
+        display-time-load-average-threshold 5
+        all-the-icons-scale-factor          1.0)
 
   (display-time-mode 1)
 
@@ -185,23 +185,22 @@ Test.test_fn()
                                              "--seed 0"
                                              "--exclude integration"
                                              "--max-failures 1")
-        lsp-elixir-enable-test-lenses nil
-        lsp-elixir-fetch-deps nil
         lsp-elixir-signature-after-complete t
-        lsp-elixir-suggest-specs nil)
+        lsp-elixir-enable-test-lenses       nil
+        lsp-elixir-suggest-specs            nil
+        lsp-elixir-fetch-deps               nil)
 
-  ;; (add-hook 'alchemist-iex-mode-hook (lambda ()
-                                       (company-mode 0))
+  (company-mode 0))
 
 (after! lua-mode
   (setq-default tab-width 2))
 
 (after! evil
-  (setq evil-escape-key-sequence "jj"
+  (setq evil-escape-key-sequence  "jj"
         evil-kill-on-visual-paste nil
-        evil-split-window-below t
-        evil-want-fine-undo nil
-        evil-vsplit-window-right t))
+        evil-split-window-below   t
+        evil-vsplit-window-right  t
+        evil-want-fine-undo       nil))
 
 (after! flycheck
   (setq flycheck-elixir-credo-strict t))
@@ -228,39 +227,39 @@ Test.test_fn()
                                              "scripts")))
 
 (after! lsp-ui
-  (setq lsp-ui-doc-max-height 100
-        lsp-ui-doc-max-width 300
-        lsp-headerline-breadcrumb-enable nil
-        lsp-headerline-breadcrumb-enable-diagnostics nil
-        lsp-headerline-breadcrumb-icons-enable nil
-        lsp-headerline-breadcrumb-enable-symbol-numbers t
-        lsp-ui-sideline-show-code-actions nil
-        lsp-ui-sideline-show-diagnostics nil))
+  (setq lsp-ui-doc-max-height                            100
+        lsp-ui-doc-max-width                             300
+        lsp-headerline-breadcrumb-enable                 nil
+        lsp-headerline-breadcrumb-enable-diagnostics     nil
+        lsp-headerline-breadcrumb-icons-enable           nil
+        lsp-headerline-breadcrumb-enable-symbol-numbers  t
+        lsp-ui-sideline-show-code-actions                nil
+        lsp-ui-sideline-show-diagnostics                 nil))
 
 (after! treemacs
   (setq doom-themes-treemacs-enable-variable-pitch nil
-        doom-themes-treemacs-theme "doom-colors"
-        treemacs-show-hidden-files nil
-        treemacs-hide-dot-git-directory t)
+        doom-themes-treemacs-theme                 "doom-colors"
+        treemacs-hide-dot-git-directory            t
+        treemacs-show-hidden-files                 nil)
   (doom-themes-treemacs-config))
 
 (after! which-key
   (setq which-key-allow-multiple-replacements t
-        which-key-idle-delay 0.5
-        which-key-idle-secondary-delay 0.05)
-        ;; which-key-use-C-h-commands t)
+        which-key-idle-delay                  0.5
+        which-key-idle-secondary-delay        0.05)
+        ;; which-key-use-C-h-commands            t)
   (pushnew! which-key-replacement-alist
             '((""       . "\\`+?evil[-:]?\\(?:a-\\)?\\(.*\\)") . (nil . "ℰ·\\1"))
             '(("\\`g s" . "\\`evilem--?motion-\\(.*\\)")       . (nil . "ℰ·\\1"))))
 
 (map! :leader
       :desc "Search highlighting" "th" #'evil-ex-nohighlight
+      :desc "Tabs"                "tt" #'centaur-tabs-mode
       (:prefix-map ("to" . "modeline")
-       :desc "Local" "o" #'hide-mode-line-mode
-       :desc "Global" "O" #'global-hide-mode-line-mode)
-      :desc "Tabs" "tt" #'centaur-tabs-mode)
+       :desc "Local"  "o" #'hide-mode-line-mode
+       :desc "Global" "O" #'global-hide-mode-line-mode))
 
 (map! :after vertico
-      :map vertico-map
-      "<next>" #'scroll-up-command
+      :map   vertico-map
+      "<next>"  #'scroll-up-command
       "<prior>" #'scroll-down-command)
