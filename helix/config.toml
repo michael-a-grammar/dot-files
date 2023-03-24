@@ -1,0 +1,70 @@
+theme = "catppuccin_frappe"
+
+[editor]
+auto-save              = true
+color-modes	           = true
+completion-trigger-len = 3
+cursorcolumn           = true
+cursorline             = true
+idle-timeout           = 1200
+line-number            = "relative"
+middle-click-paste     = false
+rulers                 = [120]
+shell                  = ["fish", "-c"]
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.statusline]
+# "mode", "spinner", "file-name", "file-encoding",
+# "file-line-ending", "total-line-numbers", "file-type", "diagnostics",
+# "workspace-diagnostics", "selections", "primary-selection-length", "position",
+# "position-percentage", "separator", "spacer"
+left  = ["mode",    "file-type",   "file-name"]
+right = ["spinner", "diagnostics", "file-encoding"]
+
+center = ["selections", "primary-selection-length",
+          "separator",
+          "position",   "position-percentage", "total-line-numbers"]
+
+mode.insert = "󱃱"
+mode.normal = ""
+mode.select = ""
+separator   = "|"
+
+[editor.whitespace]
+render = "all"
+
+[editor.whitespace.characters]
+space   = "·"
+nbsp    = "⍽"
+tab     = "→"
+newline = "⏎"
+tabpad  = "·" 
+
+[keys.normal]
+# n = "move_char_left"
+# e = "move_line_down"
+# i = "move_line_up"
+# o = "move_char_right"
+
+# N = "insert_mode"
+# E = "open_below"
+# I = "open_above"
+# O = "insert_at_line_start"
+
+# h = "move_next_word_end"
+# l = "search_next"
+
+# H = "move_next_long_word_end"
+# L = "search_prev"
+
+j = { j = "normal_mode" }
+
+[keys.normal.backspace]
+c = ":config-open"
