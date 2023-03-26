@@ -1,3 +1,5 @@
+ln -sf ~/dev/dot-files/.gitconfig ~/.gitconfig
+ln -sf ~/dev/dot-files/.irbrc ~/.irbrc
 ln -sf ~/dev/dot-files/starship.toml ~/.config/starship.toml
 ln -sf ~/dev/dot-files/bat/config ~/.config/bat/config
 ln -sf ~/dev/dot-files/bat/themes/base16-tomorrow-night.tmTheme ~/.config/bat/themes/base16-tomorrow-night.tmTheme
@@ -11,6 +13,7 @@ ln -sf ~/dev/dot-files/fish/fzf-base16-tomorrow-night.fish ~/.config/fish/fzf-ba
 ln -sf ~/dev/dot-files/fish/functions/abbreviations.fish  ~/.config/fish/functions/abbreviations.fish
 ln -sf ~/dev/dot-files/fish/functions/fish_greeting.fish ~/.config/fish/functions/fish_greeting.fish
 ln -sf ~/dev/dot-files/fish/functions/fish_user_key_bindings.fish ~/.config/fish/functions/fish_user_key_bindings.fish
+ln -sf ~/dev/dot-files/helix/config.toml ~/.config/helix/config.toml
 ln -sf ~/dev/dot-files/kitty/base16-tomorrow-night.conf  ~/.config/kitty/base16-tomorrow-night.conf
 ln -sf ~/dev/dot-files/kitty/kitty.conf ~/.config/kitty/kitty.conf
 ln -sf ~/dev/dot-files/tmux/tmux.conf ~/.config/tmux/tmux.conf

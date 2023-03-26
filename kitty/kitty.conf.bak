@@ -10,15 +10,10 @@ font_size         20.0
 url_style         straight
 mouse_hide_wait   -1
 
+cursor                none
 cursor_shape          beam
 cursor_blink_interval 0
 window_padding_width  10
-
-tab_bar_min_tabs    1
-tab_bar_edge        bottom
-tab_bar_style       powerline
-tab_powerline_style slanted
-tab_title_template  {title}{' :{}:'.format(num_windows) if num_windows > 1 else ''}
 
 confirm_os_window_close            0
 copy_on_select                     clipboard
@@ -72,5 +67,3 @@ map alt+ctrl+cmd+w       kitten hints --type word --program -
 map alt+ctrl+cmd+shift+w kitten hints --type line --program -
 map alt+ctrl+cmd+z       toggle_layout stack
 map alt+ctrl+cmd+shift+z toggle_layout tall
-
-include current-theme.conf

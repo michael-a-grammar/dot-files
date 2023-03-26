@@ -1,4 +1,4 @@
-theme = "catppuccin_frappe"
+theme = "catppuccin_macchiato"
 
 [editor]
 auto-save              = true
@@ -47,6 +47,9 @@ tab     = "→"
 newline = "⏎"
 tabpad  = "·" 
 
+[keys.insert]
+j = { j = "normal_mode" }
+
 [keys.normal]
 # n = "move_char_left"
 # e = "move_line_down"
@@ -63,8 +66,6 @@ tabpad  = "·"
 
 # H = "move_next_long_word_end"
 # L = "search_prev"
-
-j = { j = "normal_mode" }
 
 [keys.normal.backspace]
 c = ":config-open"
