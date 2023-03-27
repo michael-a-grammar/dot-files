@@ -39,7 +39,7 @@ disabled = true
 symbol = ' '
 
 [rust]
-symbol = ''
+symbol = ' '
 
 [palettes.catppuccin_macchiato]
 rosewater = "#f4dbd6"
