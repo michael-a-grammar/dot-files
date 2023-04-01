@@ -1,4 +1,4 @@
-theme = "catppuccin_macchiato"
+theme = "catppuccin_mocha"
 
 [editor]
 auto-save              = true
@@ -45,7 +45,7 @@ space   = "·"
 nbsp    = "⍽"
 tab     = "→"
 newline = "⏎"
-tabpad  = "·" 
+tabpad  = "·"
 
 [keys.insert]
 j = { j = "normal_mode" }

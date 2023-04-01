@@ -10,8 +10,8 @@ error_symbol   = "[[♥](red) ❯](red)"
 vicmd_symbol   = "[[♥](maroon) ❮](green)"
 
 [directory]
-truncation_length = 4
 style             = "bold lavender"
+truncation_length = 4
 
 [aws]
 disabled = true
@@ -24,6 +24,7 @@ format = 'via [$symbol($version on  $otp_version )]($style)'
 symbol = ' '
 
 [git_branch]
+style             = "blue"
 truncation_length = 12
 
 [lua]
