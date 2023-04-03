@@ -32,7 +32,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-tomorrow-night)
+(setq doom-theme 'catppuccin)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -128,13 +128,13 @@ end
 Test.test_fn()
 ")
 
-(custom-set-faces!
-  `(flycheck-error         :underline (:style line :color ,(doom-color 'red)))
-  `(flycheck-warning       :underline (:style line :color ,(doom-color 'yellow)))
-  `(flyspell-duplicate     :underline (:style line :color ,(doom-color 'yellow)))
-  `(flyspell-incorrect     :underline (:style line :color ,(doom-color 'red)))
-  `(flyspell-info          :underline (:style line :color ,(doom-color 'green)))
-  `(writegood-weasels-face :underline (:style line :color ,(doom-color 'orange))))
+;; (custom-set-faces!
+;;   `(flycheck-error         :underline (:style line :color ,(doom-color 'red)))
+;;   `(flycheck-warning       :underline (:style line :color ,(doom-color 'yellow)))
+;;   `(flyspell-duplicate     :underline (:style line :color ,(doom-color 'yellow)))
+;;   `(flyspell-incorrect     :underline (:style line :color ,(doom-color 'red)))
+;;   `(flyspell-info          :underline (:style line :color ,(doom-color 'green)))
+;;   `(writegood-weasels-face :underline (:style line :color ,(doom-color 'orange))))
 
 (defadvice! prompt-for-buffer (&rest _)
   :after '(evil-window-split evil-window-vsplit)
