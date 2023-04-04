@@ -15,5 +15,7 @@ ln -sf ~/dev/dot-files/helix/config.toml ~/.config/helix/config.toml
 ln -sf ~/dev/dot-files/k9s/skin.yml  ~/.config/k9s/skin.yml
 ln -sf ~/dev/dot-files/kitty/Catppuccin-Mocha.conf  ~/.config/kitty/Catppuccin-Mocha.conf
 ln -sf ~/dev/dot-files/kitty/kitty.conf ~/.config/kitty/kitty.conf
+ln -sf ~/dev/dot-files/kitty/macos-launch-services-cmdline ~/.config/kitty/macos-launch-services-cmdline
 ln -sf ~/dev/dot-files/lazygit/config.yml ~/.config/lazygit/config.yml
 ln -sf ~/dev/dot-files/vifm/vifmrc ~/.config/vifm/vifmrc
+
