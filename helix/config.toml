@@ -86,7 +86,8 @@ U = "later"
 Z = ":config-reload"
 
 [keys.normal.space]
-t = "buffer_picker"
+space = "file_picker"
+t     = "buffer_picker"
 
 [keys.normal.z]
 n = "half_page_down"
