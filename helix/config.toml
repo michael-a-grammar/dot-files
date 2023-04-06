@@ -68,6 +68,7 @@ tab = "repeat_last_motion"
 
 [keys.normal.backspace]
 "!" = "shell_append_output"
+";" = "flip_selections"
 "`" = "switch_to_uppercase"
 "|" = "shell_pipe_to"
 
