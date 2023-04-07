@@ -21,21 +21,17 @@ select = "underline"
 hidden = false
 
 [editor.statusline]
-# "mode", "spinner", "file-name", "file-encoding",
-# "file-line-ending", "total-line-numbers", "file-type", "diagnostics",
-# "workspace-diagnostics", "selections", "primary-selection-length", "position",
-# "position-percentage", "separator", "spacer", "version-control"
-left  = ["file-name", "separator", "spacer",      "version-control"]
-right = ["spinner",   "spacer",    "diagnostics", "workspace-diagnostics"]
+left   = ["file-name"]
+center = ["mode",      "spacer",   "selections",          "primary-selection-length",
+          "separator", "position", "position-percentage", "total-line-numbers"]
+right  = ["spinner",   "spacer",   "diagnostics",         "workspace-diagnostics"]
 
-center = ["mode",       "spacer",              "selections", "primary-selection-length",
-          "separator",
-          "position",   "position-percentage", "total-line-numbers"]
-
-mode.insert = "󱃱"
-mode.normal = ""
-mode.select = ""
 separator   = "|"
+
+[editor.statusline.mode]
+insert = "󱃱"
+normal = ""
+select = ""
 
 [editor.whitespace]
 render = "none"
@@ -68,25 +64,41 @@ tab = "repeat_last_motion"
 
 [keys.normal.backspace]
 "!" = "shell_append_output"
+"(" = "rotate_selection_contents_backward"
+")" = "rotate_selection_contents_forward"
+"," = "remove_primary_selection"
+":" = "ensure_selections_forward"
 ";" = "flip_selections"
+"_" = "merge_consecutive_selections"
 "`" = "switch_to_uppercase"
 "|" = "shell_pipe_to"
 
+n = "select_prev_sibling"
+e = "shrink_selection"
+i = "expand_selection"
+o = "select_next_sibling"
+
 a = "increment"
-d = "delete_selection_noyank"
 c = "change_selection_noyank"
+d = "delete_selection_noyank"
 g = "toggle_comments"
 l = "jump_forward"
 p = "jump_backward"
+s = "split_selection_on_newline"
 u = "earlier"
-x = "decrement"
+x = "shrink_to_line_bounds"
 z = ":config-open"
 
+A = "decrement"
+C = "copy_selection_on_prev_line"
+J = "join_selections_space"
+K = "remove_selections"
 P = "save_selection"
 U = "later"
 Z = ":config-reload"
 
 [keys.normal.space]
+","   = "buffer_picker"
 space = "file_picker"
 t     = "buffer_picker"
 
@@ -125,15 +137,24 @@ e = "shrink_selection"
 i = "expand_selection"
 o = "select_next_sibling"
 
+a = "increment"
 c = "change_selection_noyank"
 d = "delete_selection_noyank"
 g = "toggle_comments"
+l = "jump_forward"
+p = "jump_backward"
 s = "split_selection_on_newline"
+u = "earlier"
 x = "shrink_to_line_bounds"
+z = ":config-open"
 
+A = "decrement"
 C = "copy_selection_on_prev_line"
 J = "join_selections_space"
 K = "remove_selections"
+P = "save_selection"
+U = "later"
+Z = ":config-reload"
 
 [keys.select.space]
 t = "buffer_picker"
