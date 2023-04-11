@@ -1,7 +1,7 @@
 theme = "catppuccin_mocha"
 
 [editor]
-auto-save              = true
+auto-save              = false
 color-modes	           = true
 completion-trigger-len = 3
 cursorcolumn           = false
