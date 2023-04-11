@@ -3,6 +3,7 @@ git clone https://github.com/catppuccin/bat
 git clone https://github.com/catppuccin/chrome
 git clone https://github.com/catppuccin/emacs
 git clone https://github.com/catppuccin/fzf
+git clone https://github.com/catppuccin/iterm
 git clone https://github.com/catppuccin/k9s
 git clone https://github.com/catppuccin/lazygit
 git clone https://github.com/catppuccin/slack
