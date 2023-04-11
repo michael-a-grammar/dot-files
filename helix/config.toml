@@ -114,6 +114,12 @@ e = "scroll_down"
 i = "scroll_up"
 o = "half_page_up"
 
+[keys.normal."'"]
+c = ":sh kitty @ launch --title cargo --type window --copy-env --cwd current --hold --keep-focus cargo check"
+e = ":sh kitty @ scroll-window --match 'title:^cargo' 1p"
+i = ":sh kitty @ scroll-window --match 'title:^cargo' 1p-"
+x = ":sh kitty @ close-window --match 'title:^cargo'"
+
 [keys.insert.j]
 j = "normal_mode"
 
