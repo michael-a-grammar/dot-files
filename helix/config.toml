@@ -26,7 +26,7 @@ center = ["mode",      "spacer",   "selections",          "primary-selection-len
           "separator", "position", "position-percentage", "total-line-numbers"]
 right  = ["spinner",   "spacer",   "diagnostics",         "workspace-diagnostics"]
 
-separator   = "|"
+separator   = "󰣐"
 
 [editor.statusline.mode]
 insert = "󱃱"
@@ -101,7 +101,6 @@ Z = ":config-reload"
 ","   = "buffer_picker"
 "."   = "file_picker_in_current_buffer_directory"
 space = "file_picker"
-t     = "buffer_picker"
 
 [keys.normal.z]
 n = "half_page_down"
@@ -116,10 +115,10 @@ i = "scroll_up"
 o = "half_page_up"
 
 [keys.normal."'"]
-c = ":sh kitty @ launch --title cargo --type window --copy-env --cwd current --hold --keep-focus cargo check"
-e = ":sh kitty @ scroll-window --match 'title:^cargo' 1p"
-i = ":sh kitty @ scroll-window --match 'title:^cargo' 1p-"
-x = ":sh kitty @ close-window --match 'title:^cargo'"
+c = ":run-shell-command kitty @ launch --title cargo --type window --copy-env --cwd current --hold --keep-focus cargo check"
+e = ":run-shell-command kitty @ scroll-window --match 'title:^cargo' 1p"
+i = ":run-shell-command kitty @ scroll-window --match 'title:^cargo' 1p-"
+x = ":run-shell-command kitty @ close-window --match 'title:^cargo'"
 
 [keys.normal."'".s]
 c = ["vsplit_new", ":insert-output cargo check 2>&1; or true"]
@@ -167,4 +166,6 @@ U = "later"
 Z = ":config-reload"
 
 [keys.select.space]
-t = "buffer_picker"
+","   = "buffer_picker"
+"."   = "file_picker_in_current_buffer_directory"
+space = "file_picker"
