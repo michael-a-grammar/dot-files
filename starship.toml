@@ -1,34 +1,77 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-palette = "catppuccin_mocha"
-
 command_timeout = 10000
+palette         = "catppuccin_mocha"
+right_format    = "$git_metrics $git_status $time $battery"
 
 [character]
-success_symbol = "[[♥](green) ❯](green)"
-error_symbol   = "[[♥](red) ❯](red)"
-vicmd_symbol   = "[[♥](maroon) ❮](green)"
+error_symbol              = "[[󰋔](red)](red)"
+success_symbol            = "[[󰣐](blue)](blue)"
+vicmd_symbol              = "[[󱃱](teal)](teal)"
+vimcmd_replace_one_symbol = "[[󰩖](yellow)](yellow)"
+vimcmd_replace_symbol     = "[[󰩖](peach)](peach)"
+vimcmd_visual_symbol      = "[[](mauve)](mauve)"
 
 [directory]
-style             = "bold lavender"
+style             = "bold blue"
 truncation_length = 4
 
 [aws]
 disabled = true
 
+[battery]
+format             = "[$symbol $percentage]($style)"
+full_symbol        = "󱈏"
+charging_symbol    = "󰂅"
+discharging_symbol = "󰢝"
+unknown_symbol     = "󱃌"
+empty_symbol       = "󱃍"
+
+[[battery.display]]
+style     = "bold blue"
+threshold = 100
+
 [docker_context]
 disabled = true
 
 [elixir]
-format = 'via [$symbol($version on  $otp_version )]($style)'
-symbol = ' '
+format = "via [$symbol($version on  $otp_version )]($style)"
+style  = "bold blue"
+symbol = " "
 
 [git_branch]
-style             = "blue"
+style             = "bold mauve"
+symbol            = " "
 truncation_length = 12
 
+[git_metrics]
+added_style   = "bold blue"
+deleted_style = "bold blue"
+disabled      = false
+format        = "[](bold blue)[ 󰐕$added]($added_style) [󰍴$deleted]($deleted_style)"
+
+[git_status]
+ahead      = "󱞿${count} "
+behind     = "󱞣${count} "
+conflicted = "󰶇${count} "
+deleted    = "󰛌${count} "
+diverged   = "󱞿${ahead_count} 󱞣${behind_count} "
+format     = "[$ahead_behind$all_status]($style) "
+modified   = "${count} "
+renamed    = "${count} "
+staged     = "${count} "
+stashed    = "󱉼${count} "
+style      = "bold blue"
+untracked  = "󱜸${count} "
+up_to_date = ""
+
+[jobs]
+style  = "bold blue"
+symbol = "󱕣"
+
 [lua]
-symbol = ' '
+style  = "bold blue"
+symbol = " "
 
 [nodejs]
 disabled = true
@@ -37,35 +80,44 @@ disabled = true
 disabled = true
 
 [ruby]
-symbol = ' '
+style  = "bold blue"
+symbol = " "
 
 [rust]
-symbol = ' '
+style  = "bold blue"
+symbol = " "
+
+[time]
+disabled        = false
+format          = "[󰥔 $time]($style)"
+style           = "bold blue"
+time_format     = "%R   󰭧 %F  "
+utc_time_offset = "+1"
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
-flamingo = "#f2cdcd"
-pink = "#f5c2e7"
-mauve = "#cba6f7"
-red = "#f38ba8"
-maroon = "#eba0ac"
-peach = "#fab387"
-yellow = "#f9e2af"
-green = "#a6e3a1"
-teal = "#94e2d5"
-sky = "#89dceb"
-sapphire = "#74c7ec"
-blue = "#89b4fa"
-lavender = "#b4befe"
-text = "#cdd6f4"
-subtext1 = "#bac2de"
-subtext0 = "#a6adc8"
-overlay2 = "#9399b2"
-overlay1 = "#7f849c"
-overlay0 = "#6c7086"
-surface2 = "#585b70"
-surface1 = "#45475a"
-surface0 = "#313244"
-base = "#1e1e2e"
-mantle = "#181825"
-crust = "#11111b"
+flamingo  = "#f2cdcd"
+pink      = "#f5c2e7"
+mauve     = "#cba6f7"
+red       = "#f38ba8"
+maroon    = "#eba0ac"
+peach     = "#fab387"
+yellow    = "#f9e2af"
+green     = "#a6e3a1"
+teal      = "#94e2d5"
+sky       = "#89dceb"
+sapphire  = "#74c7ec"
+blue      = "#89b4fa"
+lavender  = "#b4befe"
+text      = "#cdd6f4"
+subtext1  = "#bac2de"
+subtext0  = "#a6adc8"
+overlay2  = "#9399b2"
+overlay1  = "#7f849c"
+overlay0  = "#6c7086"
+surface2  = "#585b70"
+surface1  = "#45475a"
+surface0  = "#313244"
+base      = "#1e1e2e"
+mantle    = "#181825"
+crust     = "#11111b"
