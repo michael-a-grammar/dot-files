@@ -71,20 +71,20 @@ deleted_style      = "bold blue"
 disabled           = false
 format             = "[](bold blue)[ 󰐕$added]($added_style) [󰍴$deleted]($deleted_style) "
 only_nonzero_diffs = false
- 
+
 [git_status]
-ahead      = "󱞿${count} "
-behind     = "󱞣${count} "
-conflicted = "󰶇${count} "
-deleted    = "󰛌${count} "
-diverged   = "󱞿${ahead_count} 󱞣${behind_count} "
+ahead      = "󱞿 ${count} "
+behind     = "󱞣 ${count} "
+conflicted = "󰶇 ${count} "
+deleted    = "󰛌 ${count} "
+diverged   = "󱞿 ${ahead_count} 󱞣${behind_count} "
 format     = "[$ahead_behind$all_status]($style)"
-modified   = "${count} "
-renamed    = "${count} "
-staged     = "${count} "
-stashed    = "󰩪${count} "
+modified   = " ${count} "
+renamed    = " ${count} "
+staged     = " ${count} "
+stashed    = "󰩪 ${count} "
 style      = "bold blue"
-untracked  = "󱜸${count} "
+untracked  = "󱜸 ${count} "
 up_to_date = " "
 
 [jobs]
