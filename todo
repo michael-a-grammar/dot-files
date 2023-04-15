@@ -1,7 +1,12 @@
-fd    - change theme
+-- fd    - change theme
 fzf   - change shortcuts
-fzf   - change search directory preview to colorls
-fish  - look into vim shortcuts
+      - move alias functions to dot files
+      - remove aliases script from dot files
+      - rebind left and right
+      - check the fzf bindings
+      - cookbook
+-- fzf   - change search directory preview to colorls
+-- fish  - look into vim shortcuts
 kitty - how to copy selection
 
 Git cheat sheet

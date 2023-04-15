@@ -10,6 +10,7 @@ ln -sf ~/dev/dot-files/doom-emacs/package.el                      ~/.doom.d/pack
 ln -sf ~/dev/dot-files/fish/config.fish                           ~/.config/fish/config.fish
 ln -sf ~/dev/dot-files/fish/functions/abbreviations.fish          ~/.config/fish/functions/abbreviations.fish
 ln -sf ~/dev/dot-files/fish/functions/fish_greeting.fish          ~/.config/fish/functions/fish_greeting.fish
+ln -sf ~/dev/dot-files/fish/functions/fish_hybrid_key_bindings.fish ~/.config/fish/functions/
 ln -sf ~/dev/dot-files/fish/functions/fish_user_key_bindings.fish ~/.config/fish/functions/fish_user_key_bindings.fish
 ln -sf ~/dev/dot-files/helix/config.toml                          ~/.config/helix/config.toml
 ln -sf ~/dev/dot-files/k9s/skin.yml                               ~/.config/k9s/skin.yml

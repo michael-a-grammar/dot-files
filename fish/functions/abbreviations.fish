@@ -6,11 +6,10 @@ function abbreviations
   abbr --add c 'clear'
   abbr --add k 'kitty @'
   abbr --add l 'lazygit'
-  abbr --add v 'nvim .'
-  abbr --add V 'nvim'
+  abbr --add v 'nvim'
 
   abbr --add cat  'bat'
-  abbr --add crg  'batgrep --no-highlight'
+  abbr --add crg  'batgrep'
   abbr --add diff 'batdiff'
 
   abbr --add g  'git'
@@ -32,8 +31,8 @@ function abbreviations
   abbr --add es 'mix setup'
   abbr --add eu 'mix deps.get'
 
-  abbr --add rb 'cargo build'
-  abbr --add rc 'cargo check'
-  abbr --add rr 'cargo run'
-  abbr --add rt 'cargo make test'
+  abbr --add cb 'cargo build'
+  abbr --add cc 'cargo check'
+  abbr --add cr 'cargo run'
+  abbr --add ct 'cargo make test'
 end
