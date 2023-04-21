@@ -16,6 +16,7 @@ function abbreviations
   abbr --add ga 'git add .'
   abbr --add gc 'git commit -m'
   abbr --add gf 'git pull'
+  abbr --add go 'git checkout'
   abbr --add gp 'git push'
 
   abbr --add gs   'colorls --git-status'

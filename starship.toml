@@ -63,7 +63,7 @@ symbol = " "
 [git_branch]
 style             = "bold mauve"
 symbol            = " "
-truncation_length = 12
+truncation_length = 24
 
 [git_metrics]
 added_style        = "bold blue"
