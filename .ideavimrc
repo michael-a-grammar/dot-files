@@ -20,7 +20,7 @@ set ideajoin
 set ideawrite=all
 set ideavimsupport=dialog,singleline
 
-let mapleader=" "
+let mapleader="Z"
 
 "set easymotion
 set NERDTree
@@ -40,10 +40,12 @@ sethandler a:vim
 
 imap jj <esc>
 
+nnoremap <space> :action LeaderAction<cr>
+vnoremap <space> :action LeaderAction<cr>
+
 map <leader><leader> <action>(ShowIntentionActions)
 
 map <leader>! <action>(Terminal.OpenInTerminal)
-map <leader>@ <action>(VSO.Select.Work.Items)
 
 map <leader>/i :set incsearch<cr>
 map <leader>/t :nohlsearch<cr>
