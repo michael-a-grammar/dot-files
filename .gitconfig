@@ -14,13 +14,17 @@
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
-[diff]
-  tool = nvim
+[mergetool "nvim"]
+  cmd = "nvim -f -c \"Gdiffsplit!\" \"$MERGED\""
 [merge]
   tool = nvim
+[mergetool]
+  prompt = true
+[difftool "nvimdiff"]
+  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+[diff]
+  tool = nvimdiff
 [difftool]
-  prompt = false
+  prompt = true
 [github]
   user = michael-a-grammar
-[url "https://github.com/dracula/"]
-  insteadOf = dracula://
