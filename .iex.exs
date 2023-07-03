@@ -1,3 +1,9 @@
+defmodule Helpers do
+  def clr(), do: clear()
+end
+
+import Helpers
+
 import_if_available(Ecto.Query)
 
 IEx.configure(colors: [enabled: true])
@@ -32,9 +38,9 @@ IEx.configure(
       nil: :red
     ],
     eval_result: [:green, :bright],
-    eval_error: [[:red, :bright, "  \n"]],
+    eval_error: [[:red, :bright, "  \n"]],
     eval_info: [:yellow, :bright],
-    eval_warning: [:yellow, :bright, " "]
+    eval_warning: [:yellow, :bright, " "]
   ],
   inspect: [
     limit: :infinity,
@@ -45,7 +51,7 @@ IEx.configure(
   ]
 )
 
-greeting_text = green_ansi <> " ❄ Prime Your Potions ❄" <> reset_ansi
+greeting_text = green_ansi <> "󱁰󱁱󱄮 Prime Your Potions 󱄮󱁱󱁰" <> reset_ansi
 
 IO.puts(greeting_text)
 
