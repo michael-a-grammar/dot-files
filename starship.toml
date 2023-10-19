@@ -1,6 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
+$hostname\
 $directory\
 $git_branch\
 $elixir\
@@ -86,6 +87,12 @@ stashed    = "󰩪 ${count} "
 style      = "bold blue"
 untracked  = "󱜸 ${count} "
 up_to_date = " "
+
+[hostname]
+format = '[$ssh_symbol$hostname]($style) in '
+ssh_only   = false
+ssh_symbol = ' '
+style      = 'bold red'
 
 [jobs]
 style  = "bold blue"
