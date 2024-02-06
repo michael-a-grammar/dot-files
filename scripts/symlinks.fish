@@ -1,4 +1,5 @@
 ln -sf ~/dev/dot-files/.gitconfig    ~/.gitconfig
+ln -sf ~/dev/dot-files/.iex.exs      ~/.iex.exs
 ln -sf ~/dev/dot-files/.irbrc        ~/.irbrc
 ln -sf ~/dev/dot-files/starship.toml ~/.config/starship.toml
 ln -sf ~/dev/dot-files/bat/config    ~/.config/bat/config

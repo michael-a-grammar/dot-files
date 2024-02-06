@@ -122,8 +122,8 @@ Z = ":config-reload"
 space = "file_picker"
 
 [keys.normal.g]
-n = "goto_line_start"
-o = "goto_line_end"
+n = ["select_mode", "goto_line_start", "normal_mode"]
+o = ["select_mode", "goto_line_end", "normal_mode"]
 
 [keys.normal.z]
 n = "half_page_down"
