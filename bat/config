@@ -27,3 +27,4 @@
 
 --theme='Catppuccin-mocha'
 --style='full'
+--paging=never
