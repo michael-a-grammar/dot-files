@@ -9,8 +9,8 @@ function abbreviations
   abbr --add v 'nvim .'
   abbr --add x 'hx .'
 
-  abbr --add cat  'batcat'
-  abbr --add crg  'batgrep'
+  abbr --add cat  'bat'
+  abbr --add cgr  'batgrep'
   abbr --add diff 'batdiff'
 
   abbr --add g  'git'
