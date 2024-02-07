@@ -11,12 +11,9 @@ end
 ln -sf ~/dev/$dev_dir/dot-files/.iex.exs ~/.iex.exs
 ln -sf ~/dev/$dev_dir/dot-files/.irbrc   ~/.irbrc
 
-ln -sf ~/dev/$dev_dir/dot-files/starship.toml ~/.config/starship.toml
+ln -sf ~/dev/$dev_dir/dot-files/starship/starship.toml ~/.config/starship.toml
 
 ln -sf ~/dev/$dev_dir/dot-files/bat/config                              ~/.config/bat/config
-ln -sf ~/dev/$dev_dir/dot-files/bat/themes/Catppuccin-frappe.tmTheme    ~/.config/bat/themes/Catppuccin-mocha.tmTheme
-ln -sf ~/dev/$dev_dir/dot-files/bat/themes/Catppuccin-latte.tmTheme     ~/.config/bat/themes/Catppuccin-mocha.tmTheme
-ln -sf ~/dev/$dev_dir/dot-files/bat/themes/Catppuccin-macchiato.tmTheme ~/.config/bat/themes/Catppuccin-macchiato.tmTheme
 ln -sf ~/dev/$dev_dir/dot-files/bat/themes/Catppuccin-mocha.tmTheme     ~/.config/bat/themes/Catppuccin-mocha.tmTheme
 
 ln -sf ~/dev/$dev_dir/dot-files/colorls/dark_colors.yaml ~/.config/colorls/dark_colors.yaml
@@ -37,14 +34,14 @@ ln -sf ~/dev/$dev_dir/dot-files/fish/functions/V.fish                      ~/.co
 
 ln -sf ~/dev/$dev_dir/dot-files/helix/config.toml ~/.config/helix/config.toml
 
-ln -sf ~/dev/$dev_dir/dot-files/kitty/Catppuccin-Latte.conf ~/.config/kitty/Catppuccin-Latte.conf
 ln -sf ~/dev/$dev_dir/dot-files/kitty/Catppuccin-Mocha.conf ~/.config/kitty/Catppuccin-Mocha.conf
 
 ln -sf ~/dev/$dev_dir/dot-files/kitty/kitty.conf ~/.config/kitty/kitty.conf
 
 if $is_linux
     ln -sf ~/dev/$dev_dir/dot-files/fish/config-linux.fish ~/.config/fish/config.fish
-    ln -sf ~/dev/$dev_dir/dot-files/.gitconfig-linux ~/.gitconfig
+    ln -sf ~/dev/$dev_dir/dot-files/.gitconfig-linux       ~/.gitconfig
+    ln -sf ~/dev/$dev_dir/dot-files/lazygit/config.yml     ~/config/lazygit/config.yml
 else
     ln -sf ~/dev/$dev_dir/dot-files/fish/config.fish                    ~/.config/fish/config.fish
     ln -sf ~/dev/$dev_dir/dot-files/.gitconfig                          ~/.gitconfig

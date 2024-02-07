@@ -75,23 +75,10 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(setq doom-font                (font-spec :family "JetBrainsMono Nerd Font Mono" :size 14)
+(setq doom-font                (font-spec :family "JetBrainsMono Nerd Font" :size 24)
       doom-symbol-font        doom-font
-      doom-big-font            (font-spec :family "JetBrainsMono Nerd Font Mono" :size 16)
-      doom-variable-pitch-font (font-spec :family "JetBrainsMono Nerd Font Mono"))
-
-(setq-default delete-by-moving-to-trash t
-              window-combination-resize t
-              x-stretch-cursor          t)
-
-(setq auto-save-default        nil
-      password-cache-expiry    nil
-      truncate-string-ellipsis "…"
-      undo-limit               6710886400
-      undo-strong-limit        100663296
-      undo-outer-limit         1006632960)
-
-(fset 'undo-auto-amalgamate 'ignore)
+      doom-big-font            (font-spec :family "JetBrainsMono Nerd Font" :size 26)
+      doom-variable-pitch-font (font-spec :family "JetBrainsMono Nerd Font"))
 
 (setq scroll-error-top-bottom           t
       scroll-preserve-screen-position   t
@@ -99,17 +86,7 @@
       scroll-step                       1
       scroll-conservatively scroll-margin)
 
-(setq mouse-wheel-inhibit-click-time nil
-      mouse-wheel-progressive-speed  nil)
-
 (setq next-error-recenter (quote (4)))
-
-(setq jit-lock-defer-time            0
-      fast-but-imprecise-scrolling nil)
-
-(setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING))
-
-;; (add-hook 'window-setup-hook #'toggle-frame-fullscreen)
 
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
