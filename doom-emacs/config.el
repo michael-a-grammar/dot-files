@@ -75,9 +75,9 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(setq doom-font                (font-spec :family "JetBrainsMono Nerd Font" :size 24)
+(setq doom-font                (font-spec :family "JetBrainsMono Nerd Font" :size 34)
       doom-symbol-font        doom-font
-      doom-big-font            (font-spec :family "JetBrainsMono Nerd Font" :size 26)
+      doom-big-font            (font-spec :family "JetBrainsMono Nerd Font" :size 36)
       doom-variable-pitch-font (font-spec :family "JetBrainsMono Nerd Font"))
 
 (setq scroll-error-top-bottom           t
