@@ -1,9 +1,3 @@
-defmodule Helpers do
-  def clr(), do: clear()
-end
-
-import Helpers
-
 import_if_available(Ecto.Query)
 
 IEx.configure(colors: [enabled: true])
@@ -51,8 +45,25 @@ IEx.configure(
   ]
 )
 
-greeting_text = green_ansi <> "󱁰󱁱󱄮 Prime Your Potions 󱄮󱁱󱁰" <> reset_ansi
-
-IO.puts(greeting_text)
+[
+  ["󱄮", "󱁰", "󱁱", " "],
+  [
+    "Hee Hee Hee!",
+    "Time for Research",
+    "Bombs Away",
+    "Let's Get Volatile",
+    "Prime Your Potions",
+    "For Science",
+    "Boom!",
+    "Ready?!",
+    "Let's Experiment"
+  ]
+]
+|> Enum.map(&Enum.random/1)
+|> then(fn
+  [symbol, phrase] ->
+    "#{green_ansi} #{symbol} #{phrase} #{symbol} #{reset_ansi}"
+end)
+|> IO.puts()
 
 Application.put_env(:elixir, :ansi_enabled, true)
