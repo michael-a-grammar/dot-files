@@ -80,6 +80,10 @@
       doom-big-font            (font-spec :family "JetBrainsMono Nerd Font" :size 36)
       doom-variable-pitch-font (font-spec :family "JetBrainsMono Nerd Font"))
 
+(setq shell-file-name (executable-find "bash"))
+(setq-default vterm-shell (executable-find "fish"))
+(setq-default explicit-shell-file-name (executable-find "fish"))
+
 (setq scroll-error-top-bottom           t
       scroll-preserve-screen-position   t
       scroll-margin                     2
@@ -142,7 +146,6 @@
   (setq which-key-allow-multiple-replacements t
         which-key-idle-delay                  0.5
         which-key-idle-secondary-delay        0.05)
-  ;; which-key-use-C-h-commands            t)
   (pushnew! which-key-replacement-alist
             '((""       . "\\`+?evil[-:]?\\(?:a-\\)?\\(.*\\)") . (nil . "ℰ·\\1"))
             '(("\\`g s" . "\\`evilem--?motion-\\(.*\\)")       . (nil . "ℰ·\\1"))))
