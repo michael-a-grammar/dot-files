@@ -1,5 +1,5 @@
 SETUVAR --export EDITOR:nvim
-SETUVAR --export --path ELDEN_PATH:/Users/{#user}/dev/vim\x2dsetup/nvim
+SETUVAR --export --path ELDEN_PATH:/Users/{#user}/dev/vim\x2dsetup/src
 SETUVAR --export ELIXIR_EDITOR:nvim
 SETUVAR --export ERL_AFLAGS:\x2dkernel\x20shell_history\x20enabled
 SETUVAR --export fish_key_bindings:fish_hybrid_key_bindings
