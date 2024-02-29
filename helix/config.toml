@@ -89,6 +89,7 @@ O = "insert_at_line_start"
 
 h = "move_next_word_end"
 l = "search_next"
+
 H = "move_next_long_word_end"
 L = "search_prev"
 
@@ -106,41 +107,46 @@ I = "open_above"
 O = "insert_at_line_start"
 
 h = "move_next_word_end"
-l = "search_next"
+l = "extend_search_next"
+
 H = "move_next_long_word_end"
-L = "search_prev"
+L = "extend_search_prev"
 
 [keys.normal.g]
 n = ["select_mode", "goto_line_start", "normal_mode"]
 o = ["select_mode", "goto_line_end",   "normal_mode"]
 
 [keys.select.g]
-n = ["select_mode", "goto_line_start", "normal_mode"]
-o = ["select_mode", "goto_line_end", "normal_mode"]
+n = ["select_mode", "goto_line_start"]
+o = ["select_mode", "goto_line_end"]
 
 [keys.normal.z]
-n = "half_page_down"
 e = "scroll_down"
 i = "scroll_up"
-o = "half_page_up"
+
+E = "page_down"
+I = "page_up"
 
 [keys.select.z]
-n = "half_page_down"
 e = "scroll_down"
 i = "scroll_up"
-o = "half_page_up"
+
+E = "page_down"
+I = "page_up"
 
 [keys.normal.Z]
-n = "half_page_down"
 e = "scroll_down"
 i = "scroll_up"
-o = "half_page_up"
+
+E = "page_down"
+I = "page_up"
 
 [keys.select.Z]
-n = "half_page_down"
 e = "scroll_down"
 i = "scroll_up"
-o = "half_page_up"
+
+E = "page_down"
+I = "page_up"
 
 [keys.normal.space]
 ","   = "buffer_picker"
