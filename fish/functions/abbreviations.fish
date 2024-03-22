@@ -5,27 +5,25 @@ function abbreviations
 
   abbr --add c 'clear'
   abbr --add k 'kitty @'
-  abbr --add l 'lazygit'
-  abbr --add v 'nvim .'
+  abbr --add v 'nvim'
   abbr --add x 'hx .'
 
-  abbr --add cat  'bat'
-  abbr --add cgr  'batgrep'
+  abbr --add gl 'lazygit'
+  abbr --add ls 'eza -a'
+  
+  abbr --add cat  'batcat'
+  abbr --add grep 'batgrep'
   abbr --add diff 'batdiff'
+
+  abbr --add dc 'docker-compose --profile host up'
+  abbr --add dx 'docker system prune --all --force'
 
   abbr --add g  'git'
   abbr --add ga 'git add .'
-  abbr --add gc 'git commit -m'
+  abbr --add gc 'git commit -m '
   abbr --add gf 'git pull'
   abbr --add go 'git checkout'
   abbr --add gp 'git push'
-
-  abbr --add gs   'colorls --git-status'
-  abbr --add ls   'colorls -A --sort-dirs'
-  abbr --add tree 'colorls -A --tree'
-
-  abbr --add dc 'docker-compose --profile host up'
-  abbr --add dp 'docker system prune --all --force'
 
   abbr --add cb 'cargo build'
   abbr --add cc 'cargo check'

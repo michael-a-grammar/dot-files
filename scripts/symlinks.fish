@@ -1,11 +1,11 @@
-set -l dev_dir 'michael-a-grammar'
+set -l dev_dir 'me'
 set -l is_linux true
 
-for d in bat bat/themes colorls doom hx kitty
-    set -l path ~/.config/$d/
-    if not test -d $path
-        mkdir $path
-    end
+for d in bat bat/themes doom hx kitty
+  set -l path ~/.config/$d/
+  if not test -d $path
+    mkdir $path
+  end
 end
 
 ln -sf ~/dev/$dev_dir/dot-files/.iex.exs                                   ~/.iex.exs
@@ -30,12 +30,12 @@ ln -sf ~/dev/$dev_dir/dot-files/kitty/Catppuccin-Mocha.conf                ~/.co
 ln -sf ~/dev/$dev_dir/dot-files/starship/starship.toml                     ~/.config/starship.toml
 
 if $is_linux
-    ln -sf ~/dev/$dev_dir/dot-files/fish/config-linux.fish       ~/.config/fish/config.fish
-    ln -sf ~/dev/$dev_dir/dot-files/.gitconfig-linux             ~/.gitconfig
-    ln -sf ~/dev/$dev_dir/dot-files/kitty/kitty-linux.conf       ~/.config/kitty/kitty.conf
+  ln -sf ~/dev/$dev_dir/dot-files/fish/config-linux.fish ~/.config/fish/config.fish
+  ln -sf ~/dev/$dev_dir/dot-files/.gitconfig-linux       ~/.gitconfig
+  ln -sf ~/dev/$dev_dir/dot-files/kitty/kitty-linux.conf ~/.config/kitty/kitty.conf
 else
-    ln -sf ~/dev/$dev_dir/dot-files/fish/config.fish                    ~/.config/fish/config.fish
-    ln -sf ~/dev/$dev_dir/dot-files/.gitconfig                          ~/.gitconfig
-    ln -sf ~/dev/$dev_dir/dot-files/kitty/kitty.conf                    ~/.config/kitty/kitty.conf
-    ln -sf ~/dev/$dev_dir/dot-files/kitty/macos-launch-services-cmdline ~/.config/kitty/macos-launch-services-cmdline
+  ln -sf ~/dev/$dev_dir/dot-files/fish/config.fish                    ~/.config/fish/config.fish
+  ln -sf ~/dev/$dev_dir/dot-files/.gitconfig                          ~/.gitconfig
+  ln -sf ~/dev/$dev_dir/dot-files/kitty/kitty.conf                    ~/.config/kitty/kitty.conf
+  ln -sf ~/dev/$dev_dir/dot-files/kitty/macos-launch-services-cmdline ~/.config/kitty/macos-launch-services-cmdline
 end

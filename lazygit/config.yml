@@ -1,10 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
+
 gui:
+  authorColors:
+    'John Smith': '#cba6f7' # use red for John Smith
+    '*': '#eba0ac'
   theme:
     activeBorderColor:
       - '#a6e3a1'
       - bold
     inactiveBorderColor:
-      - '#a6adc8'
+      - '#89b4fa'
     optionsTextColor:
       - '#89b4fa'
     selectedLineBgColor:
@@ -12,10 +17,12 @@ gui:
     cherryPickedCommitBgColor:
       - '#45475a'
     cherryPickedCommitFgColor:
-      - '#a6e3a1'
+      - '#89b4fa'
     unstagedChangesColor:
       - '#f38ba8'
     defaultFgColor:
       - '#cdd6f4'
     searchingActiveBorderColor:
       - '#f9e2af'
+  nerdFontsVersion: "3"
+  showFileIcons: true
