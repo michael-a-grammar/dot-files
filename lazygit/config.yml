@@ -2,7 +2,6 @@
 
 gui:
   authorColors:
-    'John Smith': '#cba6f7' # use red for John Smith
     '*': '#eba0ac'
   theme:
     activeBorderColor:

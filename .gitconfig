@@ -22,4 +22,5 @@
 [github]
   user = michael-a-grammar
 [credential "https://github.com"]
-  helper = !/usr/bin/gh auth git-credential
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
