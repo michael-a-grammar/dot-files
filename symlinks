@@ -1,0 +1,19 @@
+for d in bat bat/themes helix kitty lazygit
+  set -l path ~/.config/$d/
+  if not test -d $path
+    mkdir $path
+  end
+end
+
+ln -sf ~/dev/me/dot-files/.iex.exs                                   ~/.iex.exs
+ln -sf ~/dev/me/dot-files/bat/config                                 ~/.config/bat/config
+ln -sf ~/dev/me/dot-files/bat/themes/catppuccin-mocha.tmTheme        ~/.config/bat/themes/catppuccin-mocha.tmTheme
+ln -sf ~/dev/me/dot-files/fish/config.fish                           ~/.config/fish/config.fish
+ln -sf ~/dev/me/dot-files/fish/functions/abbreviations.fish          ~/.config/fish/functions/abbreviations.fish
+ln -sf ~/dev/me/dot-files/fish/functions/fish_greeting.fish          ~/.config/fish/functions/fish_greeting.fish
+ln -sf ~/dev/me/dot-files/fish/functions/install_plugins.fish        ~/.config/fish/functions/install_plugins.fish
+ln -sf ~/dev/me/dot-files/helix/config.toml                          ~/.config/helix/config.toml
+ln -sf ~/dev/me/dot-files/kitty/Catppuccin-Mocha.conf                ~/.config/kitty/Catppuccin-Mocha.conf
+ln -sf ~/dev/me/dot-files/kitty/kitty.conf                           ~/.config/kitty/kitty.conf
+ln -sf ~/dev/me/dot-files/lazygit/config.yml                         ~/.config/lazygit/config.yml
+ln -sf ~/dev/me/dot-files/starship/starship.toml                     ~/.config/starship.toml
