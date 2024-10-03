@@ -51,8 +51,8 @@ wrap-indicator     = "↪"
 
 [editor.statusline]
 left      = ["file-modification-indicator", "file-name"] 
-center    = ["spinner", "mode",      "spacer", "selections", "primary-selection-length",
-          "spacer",  "separator", "spacer", "position",   "position-percentage", "total-line-numbers"]
+center    = ["spinner", "mode", "spacer", "selections", "primary-selection-length",
+                    "spacer", "separator", "spacer", "position", "position-percentage", "total-line-numbers"]
 right     = ["register", "diagnostics", "workspace-diagnostics"]
 separator = "󰣐"
 
@@ -77,40 +77,40 @@ j = "normal_mode"
 [keys.normal]
 D = ["move_char_left", "delete_selection"]
 
-# n = "move_char_left"
-# e = "move_visual_line_down"
-# i = "move_visual_line_up"
-# o = "move_char_right"
+n = "move_char_left"
+e = "move_visual_line_down"
+i = "move_visual_line_up"
+o = "move_char_right"
 
-# N = "insert_mode"
-# E = "open_below"
-# I = "open_above"
-# O = "insert_at_line_start"
+N = "insert_mode"
+E = "open_below"
+I = "open_above"
+O = "insert_at_line_start"
 
-# h = "move_next_word_end"
-# l = "search_next"
+h = "move_next_word_end"
+l = "search_next"
 
-# H = "move_next_long_word_end"
-# L = "search_prev"
+H = "move_next_long_word_end"
+L = "search_prev"
 
 [keys.select]
 D = ["move_char_left", "delete_selection"]
 
-# n = "move_char_left"
-# e = "move_visual_line_down"
-# i = "move_visual_line_up"
-# o = "move_char_right"
+n = "move_char_left"
+e = "move_visual_line_down"
+i = "move_visual_line_up"
+o = "move_char_right"
 
-# N = "insert_mode"
-# E = "open_below"
-# I = "open_above"
-# O = "insert_at_line_start"
+N = "insert_mode"
+E = "open_below"
+I = "open_above"
+O = "insert_at_line_start"
 
-# h = "move_next_word_end"
-# l = "extend_search_next"
+h = "move_next_word_end"
+l = "extend_search_next"
 
-# H = "move_next_long_word_end"
-# L = "extend_search_prev"
+H = "move_next_long_word_end"
+L = "extend_search_prev"
 
 [keys.normal.g]
 n = ["select_mode", "goto_line_start", "normal_mode"]
@@ -152,6 +152,7 @@ I = "page_up"
 ","   = "buffer_picker"
 "."   = "file_picker_in_current_buffer_directory"
 space = "file_picker"
+tab   = "goto_previous_buffer"
 
 [keys.select.space]
 ","   = "buffer_picker"
