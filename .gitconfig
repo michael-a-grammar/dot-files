@@ -7,6 +7,7 @@
   rebase = true
 [core]
   autocrlf = input
+	hooksPath = /home/mike.bowen/dev/prima/security-hooks/hooks
 [color]
   ui = auto
 [mergetool "nvim"]
@@ -30,4 +31,4 @@
 	helper = 
 	helper = !/usr/local/bin/gh auth git-credential
 [credential]
-        helper = !'/usr/local/bin/devpod' agent git-credentials --port 12049
+  helper = !'/usr/local/bin/devpod' agent git-credentials --port 12049
