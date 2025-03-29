@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=https://json.schemastore.org/lazydocker.json
+
+gui:
+  theme:
+    activeBorderColor:
+      - '#a6e3a1'
+      - bold
+    inactiveBorderColor:
+      - '#89b4fa'
+    selectedLineBgColor:
+      - '#313244'
+    optionsTextColor:
+      - '#89b4fa'
+  returnImmediately: true
+customCommands:
+  containers:
+    - name: bash
+      attach: true
+      command: 'docker exec -it {{ .Container.ID }} bash'
+      serviceNames: []

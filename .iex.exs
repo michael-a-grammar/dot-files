@@ -14,7 +14,6 @@ IEx.configure(
   continuation_prompt: "    ",
   default_prompt:
     [
-      "\e[G",
       :yellow,
       "%counter. ",
       :magenta,
@@ -32,9 +31,9 @@ IEx.configure(
       nil: :red
     ],
     eval_result: [:green, :bright],
-    eval_error: [[:red, :bright, "  \n"]],
+    eval_error: [[:red, :bright, "   "]],
     eval_info: [:yellow, :bright],
-    eval_warning: [:yellow, :bright, " "]
+    eval_warning: [:yellow, :bright, "  "]
   ],
   inspect: [
     limit: :infinity,
