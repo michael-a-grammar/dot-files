@@ -1,6 +1,9 @@
 if status is-interactive
     if test "$TERM" = "xterm-kitty"
       starship init fish | source
+      fish_vi_key_bindings
+    else
+      fish_default_key_bindings
     end
 
     abbreviations

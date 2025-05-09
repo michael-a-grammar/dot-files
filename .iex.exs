@@ -1,8 +1,5 @@
 import_if_available(Ecto.Query)
 
-IEx.configure(colors: [enabled: true])
-IEx.configure(colors: [eval_result: [:cyan, :bright]])
-
 blue_ansi = IO.ANSI.blue()
 green_ansi = IO.ANSI.green()
 reset_ansi = IO.ANSI.reset()
@@ -23,6 +20,7 @@ IEx.configure(
     |> IO.ANSI.format()
     |> IO.chardata_to_string(),
   colors: [
+    enabled: true,
     syntax_colors: [
       number: :magenta,
       atom: :cyan,
