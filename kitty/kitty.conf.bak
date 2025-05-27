@@ -105,6 +105,6 @@ include Catppuccin-Mocha.conf
 
 
 # BEGIN_KITTY_THEME
-# Everforest Dark Medium
+# Everforest Dark Hard
 include current-theme.conf
 # END_KITTY_THEME

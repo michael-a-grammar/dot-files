@@ -1,10 +1,10 @@
-theme = "catppuccin_mocha"
+theme = "everforest_dark"
 
 [editor]
 auto-completion           = true
 auto-format               = true
 auto-info                 = true
-auto-pairs                = false
+auto-pairs                = true
 auto-save                 = false
 bufferline                = "never"
 color-modes               = true
@@ -15,7 +15,7 @@ cursorline                = true
 idle-timeout              = 400
 line-number               = "relative"
 preview-completion-insert = false
-rulers                    = [120, 78]
+rulers                    = [120]
 scroll-lines              = 2
 shell                     = ["fish", "-c"]
 text-width                = 400
