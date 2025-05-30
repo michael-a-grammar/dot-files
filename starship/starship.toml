@@ -23,7 +23,7 @@ $character\
 # """
 
 command_timeout = 10000
-# palette         = "catppuccin_mocha"
+palette         = "catppuccin_mocha"
 
 [character]
 error_symbol              = "[[󰋔](red)](red)"
