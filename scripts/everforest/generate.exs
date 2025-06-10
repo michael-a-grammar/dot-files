@@ -1,5 +1,7 @@
 Mix.install([
-  :jason
+  {:catppuccin, github: "catppuccin/elixir", tag: "v0.1.2"},
+  :jason,
+  {:mustache, "~> 0.5.0"}
 ])
 
 defmodule Theme do

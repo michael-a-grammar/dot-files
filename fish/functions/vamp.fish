@@ -1,4 +1,5 @@
 function vamp
+    stylua ~/dev/me/vamp/src
     rm -rf ~/.config/nvim/lua/
     rm -rf ~/.config/nvim/after/
 

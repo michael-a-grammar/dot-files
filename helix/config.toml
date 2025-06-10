@@ -1,13 +1,13 @@
-theme = "catppuccin_mocha"
+theme = "catppuccin_latte"
 
 [editor]
 auto-completion           = true
 auto-format               = true
 auto-info                 = true
 auto-pairs                = true
-auto-save                 = false
+auto-save                 = true
 bufferline                = "never"
-color-modes               = true
+color-modes               = false
 completion-replace        = false
 completion-trigger-len    = 4
 cursorcolumn              = true
@@ -54,11 +54,11 @@ left      = ["file-modification-indicator", "file-name"]
 center    = ["spinner", "mode", "spacer", "selections", "primary-selection-length",
                     "spacer", "separator", "spacer", "position", "position-percentage", "total-line-numbers"]
 right     = ["register", "diagnostics", "workspace-diagnostics"]
-separator = "󰣐"
+separator = "󰚄"
 
 [editor.statusline.mode]
-insert = "󱃱"
-normal = "󰣐"
+insert = ""
+normal = "󱃱"
 select = ""
 
 [editor.whitespace]
@@ -164,17 +164,17 @@ c       = "change_selection_noyank"
 C       = "copy_selection_on_prev_line"
 d       = "delete_selection_noyank"
 ":"     = "ensure_selections_forward"
-";"     = "flip_selections"
+";"     = "repeat_last_motion"
 J       = "join_selections_space"
 K       = "remove_selections"
 "_"     = "merge_consecutive_selections"
 "minus" = "merge_selections"
 ","     = "remove_primary_selection"
-"."     = "repeat_last_motion"
 "("     = "rotate_selection_contents_backward"
 ")"     = "rotate_selection_contents_forward"
 "!"     = "shell_append_output"
 "|"     = "shell_pipe_to"
+o       = "flip_selections"
 s       = "split_selection_on_newline"
 "`"     = "switch_to_uppercase"
 u       = "earlier"

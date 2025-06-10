@@ -3,14 +3,14 @@
 gui:
   theme:
     activeBorderColor:
-      - '#a6e3a1'
+      - '#40a02b'
       - bold
     inactiveBorderColor:
-      - '#89b4fa'
+      - '#7287fd'
     selectedLineBgColor:
-      - '#313244'
+      - '#ccd0da'
     optionsTextColor:
-      - '#89b4fa'
+      - '#179299'
   returnImmediately: true
 customCommands:
   containers:
