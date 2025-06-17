@@ -7,3 +7,6 @@
 [submodule "kitty/catppuccin"]
 	path = kitty/catppuccin
 	url = https://github.com/catppuccin/kitty
+[submodule "superfile/catppuccin"]
+	path = superfile/catppuccin
+	url = https://github.com/catppuccin/superfile

@@ -1,6 +1,0 @@
-bat
-fish
-lazydocker
-lazygit
-starship
-vivid
