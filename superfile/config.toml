@@ -1,6 +1,6 @@
 # More details are at https://superfile.netlify.app/configure/superfile-config/
 # change your theme
-theme = 'catppuccin-macchiato-lavender'
+theme = 'catppuccin-mocha-lavender'
 # 
 # The editor files will be opened with. (Leave blank to use the EDITOR environment variable).
 editor = ''
@@ -56,7 +56,7 @@ transparent_background = false
 file_preview_width = 0
 # 
 # Whether to use the builtin syntax highlighting with chroma or use bat. Values: "" for builtin chroma, "bat" for bat
-code_previewer = ''
+code_previewer = 'bat'
 # 
 # The length of the sidebar. If you don't want to display the sidebar, you can input 0 directly. If you want to display the value, please place it in the range of 3-20.
 sidebar_width = 20

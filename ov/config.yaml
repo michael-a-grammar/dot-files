@@ -1,0 +1,285 @@
+QuitSmall: false
+RegexpSearch: true
+SmartCaseSensitive: true
+
+General:
+  AlternateRows: false
+  ColumnDelimiter: ","
+  ColumnMode: false
+  Header: 0
+  LineNumMode: false
+  MarkStyleWidth: 1
+  TabWidth: 8
+  WrapMode: false 
+
+  Prompt:
+    Normal:
+      InvertColor: false
+      CursorType: 1
+    Input:
+      InvertColor: false
+      CursorType: 1
+  
+  Style:
+    Alternate:
+      Background: "#11111b"
+      Foreground: "#cdd6f4"
+    Header:
+      Bold: true
+    HeaderBorder:
+      # Add appropriate styles here
+    SectionHeaderBorder:
+      # Add appropriate styles here
+    SectionLine:
+      Background: "#1e1e2e"
+    VerticalHeader:
+      # Add appropriate styles here
+    VerticalHeaderBorder:
+      Background: "#11111b"
+      Foreground: "#cdd6f4"
+    Body:
+      # Add appropriate styles here
+    ColumnHighlight:
+      Reverse: true
+    LineNumber:
+      Bold: true
+    SearchHighlight:
+      Reverse: true
+    MarkLine:
+      Background: "#b4befe"
+      Foreground: "#1e1e2e"
+    Ruler:
+      Background: "#a6e3a1"
+      Foreground: "#1e1e2e"
+      Bold: true
+    LeftStatus:
+      Background: "#b4befe"
+      Foreground: "#1e1e2e"
+      Bold: true
+    RightStatus:
+      Background: "#b4befe"
+      Foreground: "#1e1e2e"
+      Bold: true
+    MultiColorHighlight:
+      - Foreground: "#f38ba8"
+      - Foreground: "#fab387"
+      - Foreground: "#f9e2af"
+      - Foreground: "#a6e3a1"
+      - Foreground: "#89dceb"
+      - Foreground: "#cba6f7"
+      - Foreground: "#f5c2e7"
+    ColumnRainbow:
+      - Foreground: "#f38ba8"
+      - Foreground: "#fab387"
+      - Foreground: "#f9e2af"
+      - Foreground: "#a6e3a1"
+      - Foreground: "#89dceb"
+      - Foreground: "#cba6f7"
+      - Foreground: "#f5c2e7"
+    JumpTargetLine:
+      Foreground: "#b4befe"
+
+KeyBind:
+    exit:
+        - "Escape"
+        - "q"
+    cancel:
+        - "ctrl+c"
+    write_exit:
+        - "Q"
+    set_write_exit:
+        - "ctrl+q"
+    suspend:
+        - "ctrl+z"
+    sync:
+        - "ctrl+l"
+    reload:
+        - "ctrl+alt+l"
+        - "F5"
+    watch:
+        - "ctrl+alt+w"
+        - "F4"
+    watch_interval:
+        - "ctrl+w"
+    follow_mode:
+        - "ctrl+f"
+    follow_all:
+        - "ctrl+a"
+    follow_section:
+        - "F2"
+    help:
+        - "h"
+    logdoc:
+        - "ctrl+f2"
+        - "ctrl+alt+e"
+    down:
+        - "Down"
+        - "f"
+    up:
+        - "Up"
+        - "p"
+    top:
+        - "ctrl+Home"
+    bottom:
+        - "ctrl+End"
+    left:
+        - "left"
+    right:
+        - "right"
+    half_left:
+        - "ctrl+left"
+    half_right:
+        - "ctrl+right"
+    page_up:
+        - "PageUp"
+        - "P"
+    page_down:
+        - "PageDown"
+        - "F"
+    page_half_up:
+        - "ctrl+u"
+    page_half_down:
+        - "ctrl+d"
+    section_delimiter:
+        - "alt+d"
+    section_start:
+        - "ctrl+F3"
+        - "alt+s"
+    section_header_num:
+        - "F7"
+    hide_other:
+        - "alt+-"
+    next_section:
+        - "space"
+    last_section:
+        - "9"
+    previous_section:
+        - "^"
+    mark:
+        - "m"
+    remove_mark:
+        - "M"
+    remove_all_mark:
+        - "ctrl+delete"
+    next_mark:
+        - ">"
+    previous_mark:
+        - "<"
+    set_view_mode:
+        - "v"
+    alter_rows_mode:
+        - "C"
+    line_number_mode:
+        - "G"
+    search:
+        - "/"
+    wrap_mode:
+        - "w"
+        - "W"
+    column_mode:
+        - "c"
+    backsearch:
+        - "?"
+    delimiter:
+        - "d"
+    header:
+        - "H"
+    skip_lines:
+        - "ctrl+s"
+    tabwidth:
+        - "t"
+    goto:
+        - "g"
+    next_search:
+        - "n"
+    next_backsearch:
+        - "N"
+    next_doc:
+        - "]"
+    previous_doc:
+        - "["
+    toggle_mouse:
+        - "ctrl+f3"
+        - "ctrl+alt+r"
+    multi_color:
+        - "."
+    jump_target:
+        - "j"
+    plain_mode:
+        - "ctrl+e"
+    rainbow_mode:
+        - "ctrl+r"
+    close_file:
+        - "ctrl+F9"
+        - "ctrl+alt+s"
+    width_left:
+        - "ctrl+shift+left"
+    width_right:
+        - "ctrl+shift+right"
+    begin_left:
+        - "Home"
+    end_right:
+        - "End"
+    column_width:
+        - "alt+o"
+    filter:
+        - "&"
+    close_doc:
+        - "ctrl+k"
+    close_all_filter:
+        - "K"
+    convert_type:
+        - "alt+t"
+    align_format:
+        - "alt+F"
+    raw_format:
+        - "alt+R"
+    vertical_header:
+        - "y"
+    header_column:
+        - "Y"
+    fixed_column:
+        - "ctrl+F"
+    shrink_column:
+        - "s"
+    toggle_ruler:
+        - "alt+shift+F9"
+    input_casesensitive:
+        - "alt+c"
+    input_smart_casesensitive:
+        - "alt+s"
+    input_incsearch:
+        - "alt+i"
+    input_regexp_search:
+        - "alt+r"
+    input_non_match:
+        - "!"
+    input_previous:
+        - "Up"
+    input_next:
+        - "Down"
+    input_copy:
+        - "ctrl+c"
+    input_paste:
+        - "ctrl+v"
+
+Mode:
+  md:
+    SectionDelimiter: "\\d+\\s+│\\s+#"
+    WrapMode: true
+
+  psql:
+    AlternateRows: true
+    ColumnDelimiter: "|"
+    ColumnMode: true
+    Header: 2
+    LineNumMode: false
+    WrapMode: true
+
+  mysql:
+    AlternateRows: true
+    ColumnDelimiter: "|"
+    ColumnMode: true
+    Header: 3
+    LineNumMode: false
+    WrapMode: true

@@ -1,0 +1,58 @@
+Style:
+  Alternate:
+    Background: "#11111b"
+    Foreground: "#cdd6f4"
+  Header:
+    Bold: true
+  HeaderBorder:
+    # Add appropriate styles here
+  SectionHeaderBorder:
+    # Add appropriate styles here
+  SectionLine:
+    Background: "#1e1e2e"
+  VerticalHeader:
+    # Add appropriate styles here
+  VerticalHeaderBorder:
+    Background: "#11111b"
+    Foreground: "#cdd6f4"
+  Body:
+    # Add appropriate styles here
+  ColumnHighlight:
+    Reverse: true
+  LineNumber:
+    Bold: true
+  SearchHighlight:
+    Reverse: true
+  MarkLine:
+    Background: "#b4befe"
+    Foreground: "#1e1e2e"
+  Ruler:
+    Background: "#a6e3a1"
+    Foreground: "#1e1e2e"
+    Bold: true
+  LeftStatus:
+    Background: "#b4befe"
+    Foreground: "#1e1e2e"
+    Bold: true
+  RightStatus:
+    Background: "#b4befe"
+    Foreground: "#1e1e2e"
+    Bold: true
+  MultiColorHighlight:
+    - Foreground: "#f38ba8"
+    - Foreground: "#fab387"
+    - Foreground: "#f9e2af"
+    - Foreground: "#a6e3a1"
+    - Foreground: "#89dceb"
+    - Foreground: "#cba6f7"
+    - Foreground: "#f5c2e7"
+  ColumnRainbow:
+    - Foreground: "#f38ba8"
+    - Foreground: "#fab387"
+    - Foreground: "#f9e2af"
+    - Foreground: "#a6e3a1"
+    - Foreground: "#89dceb"
+    - Foreground: "#cba6f7"
+    - Foreground: "#f5c2e7"
+  JumpTargetLine:
+    Foreground: "#b4befe"

@@ -1,34 +1,62 @@
-[user]
-  name = michael-a-grammar
-  email = 5898731+michael-a-grammar@users.noreply.github.com
-[push]
-  autoSetupRemote = true
-  default = current
-[pull]
-  autoSetupRemote = true
-  rebase = true
+[include]
+  path = ~/private.gitconfig
+
+[include]
+  path = ~/.config/delta/delta.gitconfig
+
 [core]
   autocrlf = input
-	hooksPath = /home/mike.bowen/dev/prima/security-hooks/hooks
+  editor = hx
+  # pager = delta --pager='ov -F'
+  pager = delta
+
+[pull]
+  rebase = true
+
+[push]
+  autoSetupRemote = true
+
 [color]
   ui = auto
-[mergetool "nvim"]
-  cmd = "nvim -f -c \"Gdiffsplit!\" \"$MERGED\""
-  prompt = true
-[merge]
-  tool = nvim
-[difftool "nvimdiff"]
-  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
-  prompt = true
+
+[interactive]
+  diffFilter = delta --color-only
+
 [diff]
   tool = nvimdiff
-[github]
-  user = michael-a-grammar
+
+[difftool "nvimdiff"]
+  cmd = nvim -d $LOCAL $REMOTE
+  prompt = true
+
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+  prompt = true
+
+[merge]
+  conflictstyle = diff3
+  tool = nvim
+
+[mergetool "nvim"]
+  cmd = nvim -f -c Gdiffsplit! $MERGED
+  prompt = true
+
+[mergetool "vscode"]
+  cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
+  prompt = true
+
+[alias]
+  dl = -c diff.external=difft log -p --ext-diff
+  ds = -c diff.external=difft show --ext-diff
+  dd = -c diff.external=difft diff
+
+# [pager]
+#   diff = delta --features ov-diff
+#   log  = delta --features ov-log
+#   show = delta --pager='ov -F --header 3'
+
 [credential "https://github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
+  helper = !/usr/bin/gh auth git-credential
+
 [credential "https://gist.github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
-[safe]
-	directory = /home/mike.bowen/dev/src/bat-extras
+  helper = !/usr/bin/gh auth git-credential

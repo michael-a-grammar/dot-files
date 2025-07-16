@@ -4,6 +4,7 @@ if status is-interactive
     end
 
     abbreviations
+    fzf_configure
 end
 
 source ~/.asdf/asdf.fish

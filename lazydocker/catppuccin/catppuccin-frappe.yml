@@ -1,10 +1,10 @@
 theme:
   activeBorderColor:
-    - '#a6d189'
+    - '#babbf1'
     - bold
   inactiveBorderColor:
-    - '#babbf1'
+    - '#a5adce'
+  optionsTextColor:
+    - '#8caaee'
   selectedLineBgColor:
     - '#414559'
-  optionsTextColor:
-    - '#81c8be'

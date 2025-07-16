@@ -1,25 +1,38 @@
-theme = "catppuccin_macchiato"
+theme = "catppuccin_mocha"
 
 [editor]
 auto-completion           = true
 auto-format               = true
 auto-info                 = true
-auto-pairs                = true
 auto-save                 = true
 bufferline                = "never"
 color-modes               = false
-completion-replace        = false
+completion-replace        = true
 completion-trigger-len    = 4
+continue-comments         = false
 cursorcolumn              = true
 cursorline                = true
+end-of-line-diagnostics   = "hint"
 idle-timeout              = 400
+indent-heuristic          = "tree-sitter"
+jump-label-alphabet       = "ntesirlpufywhdcxmgoakvqzjb"
 line-number               = "relative"
-preview-completion-insert = false
+popup-border              = "all"
+preview-completion-insert = true
 rulers                    = [120]
 scroll-lines              = 2
 shell                     = ["fish", "-c"]
 text-width                = 400
-undercurl                 = true
+undercurl                 = false
+
+[editor.auto-pairs]
+"'" = "'"
+"(" = ")"
+"<" = ">"
+"[" = "]"
+"`" = "`"
+"{" = "}"
+'"' = '"'
 
 [editor.cursor-shape]
 insert = "bar"
@@ -27,20 +40,28 @@ normal = "block"
 select = "underline"
 
 [editor.file-picker]
-hidden = false
+hidden = true
 
 [editor.indent-guides]
 character   = "|"
 render      = true
 skip-levels = 1
 
+[editor.inline-diagnostics]
+cursor-line     = "hint"
+max-diagnostics = 10
+max-wrap        = 20
+other-lines     = "hint"
+prefix-len      = 1
+
 [editor.lsp]
-display-inlay-hints = true
-display-messages	  = true
+display-inlay-hints       = true
+display-messages	        = true
+display-progress-messages = true
 
 [editor.smart-tab]
 enable         = true
-supersede-menu = true
+supersede-menu = false
 
 [editor.soft-wrap]
 enable             = true
@@ -50,10 +71,10 @@ wrap-at-text-width = true
 wrap-indicator     = "↪"
 
 [editor.statusline]
-left      = ["file-modification-indicator", "file-name"] 
+left      = ["file-modification-indicator", "file-name", "file-type"] 
 center    = ["spinner", "mode", "spacer", "selections", "primary-selection-length",
                     "spacer", "separator", "spacer", "position", "position-percentage", "total-line-numbers"]
-right     = ["register", "diagnostics", "workspace-diagnostics"]
+right     = ["register", "diagnostics", "workspace-diagnostics", "version-control", "spacer"]
 separator = "󰚄"
 
 [editor.statusline.mode]
@@ -71,46 +92,27 @@ tab     = "→"
 newline = "⏎"
 tabpad  = "·"
 
+[keys.insert]
+C-backspace = "completion"
+
+S-tab = "move_parent_node_start"
+
 [keys.insert.j]
 j = "normal_mode"
 
 [keys.normal]
 D = ["move_char_left", "delete_selection"]
 
-# n = "move_char_left"
-# e = "move_visual_line_down"
-# i = "move_visual_line_up"
-# o = "move_char_right"
+C-q = ":write-quit-all"
 
-# N = "insert_mode"
-# E = "open_below"
-# I = "open_above"
-# O = "insert_at_line_start"
-
-# h = "move_next_word_end"
-# l = "search_next"
-
-# H = "move_next_long_word_end"
-# L = "search_prev"
+tab   = "move_parent_node_end"
+S-tab = "move_parent_node_start"
 
 [keys.select]
 D = ["move_char_left", "delete_selection"]
 
-# n = "move_char_left"
-# e = "move_visual_line_down"
-# i = "move_visual_line_up"
-# o = "move_char_right"
-
-# N = "insert_mode"
-# E = "open_below"
-# I = "open_above"
-# O = "insert_at_line_start"
-
-# h = "move_next_word_end"
-# l = "extend_search_next"
-
-# H = "move_next_long_word_end"
-# L = "extend_search_prev"
+tab   = "extend_parent_node_end"
+S-tab = "extend_parent_node_start"
 
 [keys.normal.g]
 n = ["select_mode", "goto_line_start", "normal_mode"]
@@ -121,102 +123,101 @@ n = ["select_mode", "goto_line_start"]
 o = ["select_mode", "goto_line_end"]
 
 [keys.normal.z]
-e = "scroll_down"
-i = "scroll_up"
-
-E = "page_down"
-I = "page_up"
+F = "page_down"
+P = "page_up"
+f = "scroll_down"
+p = "scroll_up"
 
 [keys.select.z]
-e = "scroll_down"
-i = "scroll_up"
-
-E = "page_down"
-I = "page_up"
+F = "page_down"
+P = "page_up"
+f = "scroll_down"
+p = "scroll_up"
 
 [keys.normal.Z]
-e = "scroll_down"
-i = "scroll_up"
-
-E = "page_down"
-I = "page_up"
+F = "page_down"
+P = "page_up"
+f = "scroll_down"
+p = "scroll_up"
 
 [keys.select.Z]
-e = "scroll_down"
-i = "scroll_up"
-
-E = "page_down"
-I = "page_up"
+F = "page_down"
+P = "page_up"
+f = "scroll_down"
+p = "scroll_up"
 
 [keys.normal.space]
 ","   = "buffer_picker"
 "."   = "file_picker_in_current_buffer_directory"
 space = "file_picker"
-tab   = "goto_previous_buffer"
+tab   = "jump_backward"
+S-tab = "jump_forward"
 
 [keys.select.space]
 ","   = "buffer_picker"
 "."   = "file_picker_in_current_buffer_directory"
 space = "file_picker"
+tab   = "jump_backward"
+S-tab = "jump_forward"
 
 [keys.normal.backspace]
-c       = "change_selection_noyank"
-C       = "copy_selection_on_prev_line"
-d       = "delete_selection_noyank"
-":"     = "ensure_selections_forward"
-";"     = "repeat_last_motion"
-J       = "join_selections_space"
-K       = "remove_selections"
-"_"     = "merge_consecutive_selections"
-"minus" = "merge_selections"
-","     = "remove_primary_selection"
+"!"     = "shell_append_output"
 "("     = "rotate_selection_contents_backward"
 ")"     = "rotate_selection_contents_forward"
-"!"     = "shell_append_output"
-"|"     = "shell_pipe_to"
-o       = "flip_selections"
-s       = "split_selection_on_newline"
+","     = "remove_primary_selection"
+"."     = "repeat_last_motion"
+":"     = "ensure_selections_forward"
+";"     = "flip_selections"
+"_"     = "merge_consecutive_selections"
 "`"     = "switch_to_uppercase"
-u       = "earlier"
+"minus" = "merge_selections"
+"|"     = "shell_pipe_to"
+'*'     = 'search_selection'
+C       = "copy_selection_on_prev_line"
+I       = 'select_all_children'
+J       = "join_selections_space"
+K       = "remove_selections"
 U       = "later"
+c       = "change_selection_noyank"
+d       = "delete_selection_noyank"
+s       = "split_selection_on_newline"
+u       = "earlier"
 x       = "shrink_to_line_bounds"
 
 [keys.select.backspace]
-c       = "change_selection_noyank"
-C       = "copy_selection_on_prev_line"
-d       = "delete_selection_noyank"
-":"     = "ensure_selections_forward"
-";"     = "flip_selections"
-J       = "join_selections_space"
-K       = "remove_selections"
-"_"     = "merge_consecutive_selections"
-"minus" = "merge_selections"
-","     = "remove_primary_selection"
-"."     = "repeat_last_motion"
+"!"     = "shell_append_output"
 "("     = "rotate_selection_contents_backward"
 ")"     = "rotate_selection_contents_forward"
-"!"     = "shell_append_output"
-"|"     = "shell_pipe_to"
-s       = "split_selection_on_newline"
+","     = "remove_primary_selection"
+"."     = "repeat_last_motion"
+":"     = "ensure_selections_forward"
+";"     = "flip_selections"
+"_"     = "merge_consecutive_selections"
 "`"     = "switch_to_uppercase"
-u       = "earlier"
+"minus" = "merge_selections"
+"|"     = "shell_pipe_to"
+'*'     = 'search_selection'
+C       = "copy_selection_on_prev_line"
+I       = 'select_all_children'
+J       = "join_selections_space"
+K       = "remove_selections"
 U       = "later"
+c       = "change_selection_noyank"
+d       = "delete_selection_noyank"
+s       = "split_selection_on_newline"
+u       = "earlier"
 x       = "shrink_to_line_bounds"
 
 [keys.normal.backspace.backspace]
 a = "increment"
 c = "toggle_comments"
-i = "jump_forward"
 s = "save_selection"
-o = "jump_backward"
 x = "decrement"
 
 [keys.select.backspace.backspace]
 a = "increment"
 c = "toggle_comments"
-i = "jump_forward"
 s = "save_selection"
-o = "jump_backward"
 x = "decrement"
 
 [keys.normal."'"]
@@ -224,13 +225,19 @@ n = "select_prev_sibling"
 e = "shrink_selection"
 i = "expand_selection"
 o = "select_next_sibling"
-z = ":config-open"
+
+E = 'select_all_children'
 Z = ":config-reload"
+a = 'select_all_siblings'
+z = ":config-open"
 
 [keys.select."'"]
 n = "select_prev_sibling"
 e = "shrink_selection"
 i = "expand_selection"
 o = "select_next_sibling"
-z = ":config-open"
+
+E = 'select_all_children'
 Z = ":config-reload"
+a = 'select_all_siblings'
+z = ":config-open"

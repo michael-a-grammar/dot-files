@@ -1,12 +1,30 @@
 [submodule "bat/catppuccin"]
 	path = bat/catppuccin
 	url = https://github.com/catppuccin/bat
+[submodule "delta/catppuccin"]
+	path = delta/catppuccin
+	url = https://github.com/catppuccin/delta
+[submodule "fzf/catppuccin"]
+	path = fzf/catppuccin
+	url = https://github.com/catppuccin/fzf
 [submodule "helix/catppuccin"]
 	path = helix/catppuccin
 	url = https://github.com/catppuccin/helix
 [submodule "kitty/catppuccin"]
 	path = kitty/catppuccin
 	url = https://github.com/catppuccin/kitty
+[submodule "lazygit/catppuccin"]
+	path = lazygit/catppuccin
+	url = https://github.com/catppuccin/lazygit
+[submodule "nushell/catppuccin"]
+	path = nushell/catppuccin
+	url = https://github.com/catppuccin/nushell
 [submodule "superfile/catppuccin"]
 	path = superfile/catppuccin
 	url = https://github.com/catppuccin/superfile
+[submodule "television/catppuccin"]
+	path = television/catppuccin
+	url = https://github.com/catppuccin/television
+[submodule "warp-terminal/catppuccin"]
+	path = warp-terminal/catppuccin
+	url = https://github.com/catppuccin/warp
