@@ -1,0 +1,12 @@
+[language-server.lexical]
+command = "/home/mike.bowen/dev/src/lexical/_build/dev/package/lexical/bin/start_lexical.sh"
+
+[[language]]
+auto-format = true
+formatter = { command = "mix format" }
+name = "elixir"
+language-servers = ["lexical"]
+
+[[language]]
+name = "heex"
+language-servers = ["lexical"]

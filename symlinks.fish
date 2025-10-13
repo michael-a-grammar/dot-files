@@ -26,6 +26,8 @@ ln -sf ~/dev/me/dot-files/fish/functions/*.fish ~/.config/fish/functions/
 
 ln -sf ~/dev/me/dot-files/helix/config.toml ~/.config/helix/
 
+ln -sf ~/dev/me/dot-files/helix/languages.toml ~/.config/helix/
+
 ln -sf ~/dev/me/dot-files/helix/catppuccin/themes/default/*.toml ~/.config/helix/themes/
 
 ln -sf ~/dev/me/dot-files/kitty/kitty.conf ~/.config/kitty/

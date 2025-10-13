@@ -5,7 +5,7 @@ function abbreviations
 
     abbr --add ls 'eza -a'
 
-    abbr --add cat bat --pager "ov -- -F -H3"
+    abbr --add cat bat
     abbr --add grep batgrep
     abbr --add diff batdiff
 
