@@ -1,20 +1,20 @@
 if status is-interactive
-    if test "$TERM" = xterm-kitty
-        starship init fish | source
-    end
+    starship init fish | source
 
     abbreviations
     fzf_configure
 end
 
-source ~/.asdf/asdf.fish
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-set -gx HOMEBREW_PREFIX "/home/linuxbrew/.linuxbrew"
-set -gx HOMEBREW_CELLAR "/home/linuxbrew/.linuxbrew/Cellar"
-set -gx HOMEBREW_REPOSITORY "/home/linuxbrew/.linuxbrew/Homebrew"
+if test -z $ASDF_DATA_DIR
+    set _asdf_shims "$HOME/.asdf/shims"
+else
+    set _asdf_shims "$ASDF_DATA_DIR/shims"
+end
 
-set -q MANPATH; or set MANPATH ''
-set -gx MANPATH "/home/linuxbrew/.linuxbrew/share/man" $MANPATH
+if not contains $_asdf_shims $PATH
+    set -gx --prepend PATH $_asdf_shims
+end
 
-set -q INFOPATH; or set INFOPATH ''
-set -gx INFOPATH "/home/linuxbrew/.linuxbrew/share/info" $INFOPATH
+set --erase _asdf_shims
