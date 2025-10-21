@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # brew
-brew install asdf
 brew install bat
 brew install bat-extras
 brew install difftastic
@@ -42,6 +41,7 @@ sudo apt install -y alacritty \
 
 # snap
 sudo snap install apple-music-for-linux
+sudo snap install aws-cli
 sudo snap install discord
 sudo snap install slack
 
@@ -62,6 +62,8 @@ if not type docker >/dev/null
         containerd.io \
         docker-buildx-plugin \
         docker-compose-plugin
+
+    sudo usermod -aG docker $USER
 end
 
 # cloudflare warp

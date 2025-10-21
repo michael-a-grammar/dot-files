@@ -1,6 +1,26 @@
 #!/usr/bin/env fish
 
-for directory in bat/themes delta helix/themes kitty/themes lazydocker lazygit nushell ov superfile/theme television/themes warp-terminal/themes
+set directories \
+    alacritty/themes \
+    bat/themes \
+    delta \
+    dunst \
+    helix/themes \
+    i3 \
+    kitty/themes \
+    lazydocker \
+    lazygit \
+    nushell \
+    ov \
+    picom \
+    polybar/themes \
+    rofi/themes \
+    superfile/theme \
+    television/themes \
+    warp-terminal/themes \
+    zellij
+
+for directory in $directories
     set -l path ~/.config/$directory/
 
     if not test -d $path
@@ -10,7 +30,19 @@ end
 
 ln -sf ~/dev/me/dot-files/.gitconfig ~/
 
+ln -sf ~/dev/me/dot-files/.gtkrc-2.0 ~/
+
 ln -sf ~/dev/me/dot-files/.iex.exs ~/
+
+ln -sf ~/dev/me/dot-files/.xinitrc ~/
+
+ln -sf ~/dev/me/dot-files/.xprofile ~/
+
+ln -sf ~/dev/me/dot-files/.Xresources ~/
+
+ln -sf ~/dev/me/dot-files/alacritty/alacritty.toml ~/.config/alacritty/
+
+ln -sf ~/dev/me/dot-files/alacritty/catppuccin/*.toml ~/.config/alacritty/themes/
 
 ln -sf ~/dev/me/dot-files/bat/config ~/.config/bat/
 
@@ -19,6 +51,8 @@ ln -sf ~/dev/me/dot-files/bat/catppuccin/themes/*.tmTheme ~/.config/bat/themes/
 ln -sf ~/dev/me/dot-files/delta/delta.gitconfig ~/.config/delta/
 
 ln -sf ~/dev/me/dot-files/delta/catppuccin/catppuccin.gitconfig ~/.config/delta/
+
+ln -sf ~/dev/me/dot-files/dunst/dunstrc ~/.config/dunst/
 
 ln -sf ~/dev/me/dot-files/fish/config.fish ~/.config/fish/
 
@@ -29,6 +63,8 @@ ln -sf ~/dev/me/dot-files/helix/config.toml ~/.config/helix/
 ln -sf ~/dev/me/dot-files/helix/languages.toml ~/.config/helix/
 
 ln -sf ~/dev/me/dot-files/helix/catppuccin/themes/default/*.toml ~/.config/helix/themes/
+
+ln -sf ~/dev/me/dot-files/i3/config ~/.config/i3/
 
 ln -sf ~/dev/me/dot-files/kitty/kitty.conf ~/.config/kitty/
 
@@ -42,6 +78,20 @@ ln -sf ~/dev/me/dot-files/nushell/*.nu ~/.config/nushell/
 
 ln -sf ~/dev/me/dot-files/ov/config.yaml ~/.config/ov/
 
+ln -sf ~/dev/me/dot-files/picom/picom.conf ~/.config/picom/
+
+ln -sf ~/dev/me/dot-files/polybar/launch.sh ~/.config/polybar/
+
+ln -sf ~/dev/me/dot-files/polybar/config.ini ~/.config/polybar/
+
+ln -sf ~/dev/me/dot-files/polybar/catppuccin/themes/*.ini ~/.config/polybar/themes/
+
+ln -sf ~/dev/me/dot-files/rofi/config.rasi ~/.config/rofi/
+
+ln -sf ~/dev/me/dot-files/rofi/catppuccin/catppuccin-default.rasi ~/.config/rofi/themes/
+
+ln -sf ~/dev/me/dot-files/rofi/catppuccin/themes/**.rasi ~/.config/rofi/themes/
+
 ln -sf ~/dev/me/dot-files/starship/starship.toml ~/.config/
 
 ln -sf ~/dev/me/dot-files/superfile/config.toml ~/.config/superfile/
@@ -53,3 +103,5 @@ ln -sf ~/dev/me/dot-files/television/*.toml ~/.config/television/
 ln -sf ~/dev/me/dot-files/television/catppuccin/themes/*.toml ~/.config/television/themes/
 
 ln -sf ~/dev/me/dot-files/warp-terminal/catppuccin/themes/*.yml ~/.config/warp-terminal/themes/
+
+ln -sf ~/dev/me/dot-files/zellij/config.kdl ~/.config/zellij/

@@ -3,70 +3,82 @@
 sudo apt update && sudo apt upgrade -y
 
 sudo apt install -y build-essential \
-                           autoconf \
-                           automake \
-                    ca-certificates \
-                          coreutils \
-                               curl \
-                                git \
-                               make \
-                         libbz2-dev \
-                         libffi-dev \
-                    libgl1-mesa-dev \
-                   libglu1-mesa-dev \
-                         libgmp-dev \
-                         libgtk-3-0 \
-                        liblzma-dev \
-                     libncurses-dev \
-                   libncursesw5-dev \
-                         libpng-dev \
-                    libreadline-dev \
-                     libsqlite3-dev \
-                         libssh-dev \
-                         libssl-dev \
-                       libusb-1.0-0 \
-                libwebkit2gtk-4.1-0 \
-                    libwxgtk3.2-dev \
-            libwxgtk-webview3.2-dev \
-                        libxml2-dev \
-                      libxml2-utils \
-                     libxmlsec1-dev \
-                        libyaml-dev \
-                        libzstd-dev \
-                     openjdk-11-jdk \
-                             tk-dev \
-                       unixodbc-dev \
-                           xsltproc \
-                           xz-utils \
-                         zlib1g-dev \
-                                fop \
-                                 m4 \
-                                unzip
-
+	autoconf \
+	automake \
+	ca-certificates \
+	coreutils \
+	curl \
+	git \
+	make \
+	libbz2-dev \
+	libffi-dev \
+	libgl1-mesa-dev \
+	libglu1-mesa-dev \
+	libgmp-dev \
+	libgtk-3-0 \
+	liblzma-dev \
+	libncurses-dev \
+	libncursesw5-dev \
+	libpng-dev \
+	libreadline-dev \
+	libsqlite3-dev \
+	libssh-dev \
+	libssl-dev \
+	libusb-1.0-0 \
+	libwebkit2gtk-4.1-0 \
+	libwxgtk3.2-dev \
+	libwxgtk-webview3.2-dev \
+	libxml2-dev \
+	libxml2-utils \
+	libxmlsec1-dev \
+	libyaml-dev \
+	libzstd-dev \
+	openjdk-11-jdk \
+	tk-dev \
+	unixodbc-dev \
+	xsltproc \
+	xz-utils \
+	zlib1g-dev \
+	fop \
+	m4 \
+	unzip
 
 # homebrew
-if ! type brew > /dev/null; then
-  bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if ! type brew >/dev/null; then
+	bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-  # configure homebrew for bash
-  echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+	echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >>~/.bashrc
+	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-  brew install gcc
+	brew install gcc
 fi
 
 # fish shell
-if ! type fish > /dev/null; then
-  brew install fish
+if ! type fish >/dev/null; then
+	brew install fish
 
-  # configure homebrew for fish
-  echo >> ~/.config/fish/config.fish
-  echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.config/fish/config.fish
+	echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >>~/.config/fish/config.fish
 
-  # change default shell to fish
-  command -v fish | sudo tee -a /etc/shells
+	command -v fish | sudo tee -a /etc/shells
 
-  sudo chsh -s "$(command -v fish)" "${USER}"
+	sudo chsh -s "$(command -v fish)" "${USER}"
+fi
+
+# asdf
+if ! type asdf >/dev/null; then
+	cat >>~/.config/fish/config.fish <<EOF
+if test -z $ASDF_DATA_DIR
+    set _asdf_shims "$HOME/.asdf/shims"
+else
+    set _asdf_shims "$ASDF_DATA_DIR/shims"
+end
+
+if not contains $_asdf_shims $PATH
+    set -gx --prepend PATH $_asdf_shims
+end
+
+set --erase _asdf_shims
+EOF
 fi
 
 # directories
@@ -77,9 +89,9 @@ mkdir -p ~/dev/src/
 
 # keymapp
 if [ ! -s /etc/udev/rules.d/50-zsa.rules ]; then
-  sudo touch /etc/udev/rules.d/50-zsa.rules
+	sudo touch /etc/udev/rules.d/50-zsa.rules
 
-  sudo tee -a /etc/udev/rules.d/50-zsa.rules > /dev/null <<EOT
+	sudo tee -a /etc/udev/rules.d/50-zsa.rules >/dev/null <<EOT
 # Rules for Oryx web flashing and live training
 KERNEL=="hidraw*", ATTRS{idVendor}=="16c0", MODE="0664", GROUP="plugdev"
 KERNEL=="hidraw*", ATTRS{idVendor}=="3297", MODE="0664", GROUP="plugdev"
@@ -106,13 +118,13 @@ SUBSYSTEMS=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="df11", MODE:="066
 SUBSYSTEMS=="usb", ATTRS{idVendor}=="3297", MODE:="0666", SYMLINK+="ignition_dfu"
 EOT
 
-  sudo groupadd plugdev
-  sudo usermod -aG plugdev $USER
+	sudo groupadd plugdev
+	sudo usermod -aG plugdev $USER
 fi
 
 if [ ! -f ~/bin/keymapp ]; then
-  curl -o ~/Downloads/keymapp.tar.gz https://oryx.nyc3.cdn.digitaloceanspaces.com/keymapp/keymapp-latest.tar.gz
-  tar -xvzf ~/Downloads/keymapp.tar.gz -C ~/Downloads/
-  mv ~/Downloads/keymapp ~/bin/
-  chmod +x ~/bin/keymapp
+	curl -o ~/Downloads/keymapp.tar.gz https://oryx.nyc3.cdn.digitaloceanspaces.com/keymapp/keymapp-latest.tar.gz
+	tar -xvzf ~/Downloads/keymapp.tar.gz -C ~/Downloads/
+	mv ~/Downloads/keymapp ~/bin/
+	chmod +x ~/bin/keymapp
 fi

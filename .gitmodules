@@ -1,3 +1,7 @@
+[submodule "alacritty/catppuccin"]
+	path = alacritty/catppuccin
+	url = https://github.com/catppuccin/alacritty
+	branch = main
 [submodule "bat/catppuccin"]
 	path = bat/catppuccin
 	url = https://github.com/catppuccin/bat
@@ -5,6 +9,10 @@
 [submodule "delta/catppuccin"]
 	path = delta/catppuccin
 	url = https://github.com/catppuccin/delta
+	branch = main
+[submodule "dunst/catppuccin"]
+	path = dunst/catppuccin
+	url = https://github.com/catppuccin/dunst
 	branch = main
 [submodule "fzf/catppuccin"]
 	path = fzf/catppuccin
@@ -14,6 +22,9 @@
 	path = helix/catppuccin
 	url = https://github.com/catppuccin/helix
 	branch = main
+[submodule "i3/catppuccin"]
+	path = i3/catppuccin
+	url = https://github.com/catppuccin/i3
 [submodule "kitty/catppuccin"]
 	path = kitty/catppuccin
 	url = https://github.com/catppuccin/kitty
@@ -25,6 +36,14 @@
 [submodule "nushell/catppuccin"]
 	path = nushell/catppuccin
 	url = https://github.com/catppuccin/nushell
+	branch = main
+[submodule "polybar/catppuccin"]
+	path = polybar/catppuccin
+	url = https://github.com/catppuccin/polybar
+	branch = main
+[submodule "rofi/catppuccin"]
+	path = rofi/catppuccin
+	url = https://github.com/catppuccin/rofi
 	branch = main
 [submodule "superfile/catppuccin"]
 	path = superfile/catppuccin

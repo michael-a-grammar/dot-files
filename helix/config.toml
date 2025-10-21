@@ -1,7 +1,7 @@
 theme = "catppuccin_mocha"
 
 [editor]
-auto-completion           = true
+auto-completion           = false
 auto-format               = true
 auto-info                 = true
 auto-pairs                = false
@@ -25,15 +25,6 @@ scroll-lines              = 2
 shell                     = ["fish", "-c"]
 text-width                = 400
 undercurl                 = false
-
-# [editor.auto-pairs]
-# "'" = "'"
-# "(" = ")"
-# "<" = ">"
-# "[" = "]"
-# "`" = "`"
-# "{" = "}"
-# '"' = '"'
 
 [editor.cursor-shape]
 insert = "bar"
@@ -100,11 +91,11 @@ C-backspace = "completion"
 j = "normal_mode"
 
 [keys.normal]
+C-q = ":write-quit-all"
+
 D = ["move_char_left", "delete_selection"]
 V = ["extend_line_below", "select_mode"]
 X = "select_line_above"
-
-C-q = ":write-quit-all"
 
 [keys.select]
 D = ["move_char_left", "delete_selection"]
@@ -119,90 +110,104 @@ n = ["select_mode", "goto_line_start"]
 o = ["select_mode", "goto_line_end"]
 
 [keys.normal.z]
-F = "page_down"
-P = "page_up"
 f = "scroll_down"
 p = "scroll_up"
+
+F = "page_down"
+P = "page_up"
 
 [keys.select.z]
-F = "page_down"
-P = "page_up"
 f = "scroll_down"
 p = "scroll_up"
+
+F = "page_down"
+P = "page_up"
 
 [keys.normal.Z]
-F = "page_down"
-P = "page_up"
 f = "scroll_down"
 p = "scroll_up"
 
-[keys.select.Z]
 F = "page_down"
 P = "page_up"
+
+[keys.select.Z]
 f = "scroll_down"
 p = "scroll_up"
+
+F = "page_down"
+P = "page_up"
 
 [keys.normal.space]
 ","   = "buffer_picker"
 "."   = "file_picker_in_current_buffer_directory"
+
 space = "file_picker"
 tab   = "jump_backward"
 S-tab = "jump_forward"
 
+e = "file_explorer_in_current_buffer_directory"
+
 [keys.select.space]
 ","   = "buffer_picker"
 "."   = "file_picker_in_current_buffer_directory"
+
+e = "file_explorer_in_current_buffer_directory"
+
 space = "file_picker"
 tab   = "jump_backward"
 S-tab = "jump_forward"
 
 [keys.normal.backspace]
-"!"     = "shell_append_output"
-"("     = "rotate_selection_contents_backward"
-")"     = "rotate_selection_contents_forward"
-","     = "remove_primary_selection"
-"."     = "repeat_last_motion"
 ":"     = "ensure_selections_forward"
 ";"     = "flip_selections"
 "_"     = "merge_consecutive_selections"
-"`"     = "switch_to_uppercase"
-"minus" = "merge_selections"
-"|"     = "shell_pipe_to"
+"minus"  = "merge_selections"
+","     = "remove_primary_selection"
+"."     = "repeat_last_motion"
+"("     = "rotate_selection_contents_backward"
+")"     = "rotate_selection_contents_forward"
 '*'     = 'search_selection'
-C       = "copy_selection_on_prev_line"
-I       = 'select_all_children'
-J       = "join_selections_space"
-K       = "remove_selections"
-U       = "later"
+"!"     = "shell_append_output"
+"|"     = "shell_pipe_to"
+"`"     = "switch_to_uppercase"
+
 c       = "change_selection_noyank"
 d       = "delete_selection_noyank"
 s       = "split_selection_on_newline"
 u       = "earlier"
 x       = "shrink_to_line_bounds"
 
-[keys.select.backspace]
-"!"     = "shell_append_output"
-"("     = "rotate_selection_contents_backward"
-")"     = "rotate_selection_contents_forward"
-","     = "remove_primary_selection"
-"."     = "repeat_last_motion"
-":"     = "ensure_selections_forward"
-";"     = "flip_selections"
-"_"     = "merge_consecutive_selections"
-"`"     = "switch_to_uppercase"
-"minus" = "merge_selections"
-"|"     = "shell_pipe_to"
-'*'     = 'search_selection'
 C       = "copy_selection_on_prev_line"
 I       = 'select_all_children'
 J       = "join_selections_space"
 K       = "remove_selections"
 U       = "later"
+
+[keys.select.backspace]
+":"     = "ensure_selections_forward"
+";"     = "flip_selections"
+"_"     = "merge_consecutive_selections"
+"minus"  = "merge_selections"
+","     = "remove_primary_selection"
+"."     = "repeat_last_motion"
+"("     = "rotate_selection_contents_backward"
+")"     = "rotate_selection_contents_forward"
+'*'     = 'search_selection'
+"!"     = "shell_append_output"
+"|"     = "shell_pipe_to"
+"`"     = "switch_to_uppercase"
+
 c       = "change_selection_noyank"
 d       = "delete_selection_noyank"
 s       = "split_selection_on_newline"
 u       = "earlier"
 x       = "shrink_to_line_bounds"
+
+C       = "copy_selection_on_prev_line"
+I       = 'select_all_children'
+J       = "join_selections_space"
+K       = "remove_selections"
+U       = "later"
 
 [keys.normal.backspace.backspace]
 a = "increment"
@@ -217,23 +222,25 @@ s = "save_selection"
 x = "decrement"
 
 [keys.normal."'"]
+a = 'select_all_siblings'
+z = ":config-open"
+
+E = 'select_all_children'
+Z = ":config-reload"
+
 n = "select_prev_sibling"
 e = "shrink_selection"
 i = "expand_selection"
 o = "select_next_sibling"
-
-E = 'select_all_children'
-Z = ":config-reload"
-a = 'select_all_siblings'
-z = ":config-open"
 
 [keys.select."'"]
+a = 'select_all_siblings'
+z = ":config-open"
+
+E = 'select_all_children'
+Z = ":config-reload"
+
 n = "select_prev_sibling"
 e = "shrink_selection"
 i = "expand_selection"
 o = "select_next_sibling"
-
-E = 'select_all_children'
-Z = ":config-reload"
-a = 'select_all_siblings'
-z = ":config-open"

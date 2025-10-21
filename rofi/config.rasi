@@ -1,0 +1,12 @@
+@theme "catppuccin-default"
+
+configuration {
+    font: "JetBrains Mono Nerd Font 20";
+    show-icons: true;
+    display-window: "Window";
+    display-drun: "Search";
+}
+
+listview {
+    lines: 12;
+}

@@ -56,7 +56,9 @@
 #   show = delta --pager='ov -F --header 3'
 
 [credential "https://github.com"]
-  helper = !/usr/bin/gh auth git-credential
+	helper = 
+	helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
 
 [credential "https://gist.github.com"]
-  helper = !/usr/bin/gh auth git-credential
+	helper = 
+	helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential

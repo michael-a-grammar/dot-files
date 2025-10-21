@@ -22,26 +22,22 @@ $character\
 # $battery\
 # """
 
-right_format = """
-  $time \
-"""
-
 command_timeout = 10000
 palette         = "catppuccin_mocha"
 
 [character]
 error_symbol              = "[[󰋔](red)](red)"
-success_symbol            = "[[󰣐](lavender)](lavender)"
+success_symbol            = "[[󰣐](blue)](blue)"
 vicmd_symbol              = "[[󱃱](teal)](teal)"
 vimcmd_replace_one_symbol = "[[󰩖](yellow)](yellow)"
 vimcmd_replace_symbol     = "[[󰩖](peach)](peach)"
 vimcmd_visual_symbol      = "[[](mauve)](mauve)"
 
 [cmd_duration]
-style = "bold lavender"
+style = "bold blue"
 
 [directory]
-style             = "bold lavender"
+style             = "bold blue"
 truncation_length = 4
 
 [aws]
@@ -98,7 +94,7 @@ ssh_symbol = ' '
 style      = 'bold red'
 
 [jobs]
-style  = "bold lavender"
+style  = "bold blue"
 symbol = "󱕣"
 
 [lua]
@@ -124,7 +120,7 @@ pipestatus_format     = "$pipestatus[󰁚 $symbol]($style)"
 pipestatus_separator  = "[󰁚 ]($style)"
 sigint_symbol         = "󰋮 "
 signal_symbol         = "󰢿 "
-style                 = "bold lavender"
+style                 = "bold blue"
 success_symbol        = "󰈺 "
 symbol                = " "
 

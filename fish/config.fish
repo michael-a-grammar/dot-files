@@ -1,11 +1,11 @@
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 if status is-interactive
     starship init fish | source
 
     abbreviations
     fzf_configure
 end
-
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 if test -z $ASDF_DATA_DIR
     set _asdf_shims "$HOME/.asdf/shims"

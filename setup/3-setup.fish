@@ -1,4 +1,6 @@
-# asdf plugins
+# asdf
+brew install asdf
+
 asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git
 asdf plugin add elixir https://github.com/asdf-vm/asdf-elixir.git
 
@@ -15,28 +17,28 @@ set -Ux KERL_INSTALL_HTMLDOCS yes
 set -Ux KERL_INSTALL_MANPAGES yes
 
 asdf install erlang latest
-asdf global erlang latest
+asdf set --home erlang latest
 
 asdf install elixir latest
-asdf global elixir latest
+asdf set --home elixir latest
 
 asdf install golang latest
-asdf global golang latest
+asdf set --home golang latest
 
 asdf install neovim latest
-asdf global neovim latest
+asdf set --home neovim latest
 
 asdf install nodejs latest
-asdf global nodejs latest
+asdf set --home nodejs latest
 
 asdf install pnpm latest
-asdf global pnpm latest
+asdf set --home pnpm latest
 
 asdf install python latest
-asdf global python latest
+asdf set --home python latest
 
 asdf install ruby latest
-asdf global ruby latest
+asdf set --home ruby latest
 
 asdf install yarn latest
-asdf global yarn latest
+asdf set --home yarn latest

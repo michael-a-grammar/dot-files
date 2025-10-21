@@ -6,4 +6,4 @@ echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg
 https://archive.regolith-desktop.com/ubuntu/stable noble main" | sudo tee /etc/apt/sources.list.d/regolith.list
 
 sudo apt update
-sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
+sudo apt install regolith-desktop regolith-session-flashback regolith-look-dracula
