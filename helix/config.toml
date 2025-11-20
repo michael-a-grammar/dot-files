@@ -6,8 +6,8 @@ auto-format               = true
 auto-info                 = true
 auto-pairs                = false
 auto-save                 = true
-bufferline                = "never"
-color-modes               = false
+bufferline                = "always"
+color-modes               = true
 completion-replace        = true
 completion-trigger-len    = 4
 continue-comments         = false
@@ -63,16 +63,17 @@ wrap-at-text-width = true
 wrap-indicator     = "↪"
 
 [editor.statusline]
-left      = ["file-modification-indicator", "file-name", "file-type"] 
-center    = ["spinner", "mode", "spacer", "selections", "primary-selection-length",
-                    "spacer", "separator", "spacer", "position", "position-percentage", "total-line-numbers"]
-right     = ["register", "spacer"]
+center = ["spacer", "spacer", "spacer", "spacer", "separator", "file-name", "file-modification-indicator"]
+left   = ["mode", "spinner", "selections", "primary-selection-length",
+                 "position", "position-percentage", "total-line-numbers", "register"]
+right  = ["version-control"]
+
 separator = "󰚄"
 
 [editor.statusline.mode]
-insert = ""
-normal = "󱃱"
-select = ""
+insert = " 󱃱 "
+normal = "  "
+select = "  "
 
 [editor.whitespace]
 render = "none"
@@ -91,6 +92,8 @@ C-backspace = "completion"
 j = "normal_mode"
 
 [keys.normal]
+C-i = "jump_forward"
+C-o = "jump_backward"
 C-q = ":write-quit-all"
 
 D = ["move_char_left", "delete_selection"]
@@ -142,8 +145,8 @@ P = "page_up"
 "."   = "file_picker_in_current_buffer_directory"
 
 space = "file_picker"
-tab   = "jump_backward"
-S-tab = "jump_forward"
+tab   = ":buffer-previous"
+S-tab = ":buffer-next"
 
 e = "file_explorer_in_current_buffer_directory"
 
@@ -154,14 +157,14 @@ e = "file_explorer_in_current_buffer_directory"
 e = "file_explorer_in_current_buffer_directory"
 
 space = "file_picker"
-tab   = "jump_backward"
-S-tab = "jump_forward"
+tab   = ":buffer-previous"
+S-tab = ":buffer-next"
 
 [keys.normal.backspace]
 ":"     = "ensure_selections_forward"
 ";"     = "flip_selections"
 "_"     = "merge_consecutive_selections"
-"minus"  = "merge_selections"
+"minus" = "merge_selections"
 ","     = "remove_primary_selection"
 "."     = "repeat_last_motion"
 "("     = "rotate_selection_contents_backward"

@@ -24,4 +24,6 @@ function update
     sudo ./aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli --update
 
     fish_update_completions
+
+    fwupdmgr update
 end

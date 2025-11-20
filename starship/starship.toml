@@ -1,6 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
+$jobs\
 $directory\
 $git_branch\
 $elixir\
@@ -11,7 +12,6 @@ $rust\
 $cmd_duration\
 $status\
 $line_break\
-$jobs\
 $character\
 """
 
@@ -95,7 +95,7 @@ style      = 'bold red'
 
 [jobs]
 style  = "bold blue"
-symbol = "󱕣"
+symbol = "󱕣 "
 
 [lua]
 style  = "bold lavender"

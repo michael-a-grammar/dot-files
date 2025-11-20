@@ -3,10 +3,13 @@ import = ["~/.config/alacritty/themes/catppuccin-mocha.toml",]
 [env]
 TERM = "alacritty"
 
+[shell]
+program = "/home/linuxbrew/.linuxbrew/bin/fish"
+
 [window]
-decorations = "None"
-startup_mode = "Maximized"
+decorations       = "None"
 resize_increments = true
+startup_mode      = "Maximized"
 
 [window.padding]
 x = 10
@@ -17,7 +20,7 @@ size = 10
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
-style = "Regular"
+style  = "Regular"
 
 [selection]
 save_to_clipboard = true
@@ -38,24 +41,29 @@ hide_when_typing = true
 alphabet = "ntesirlpufywhdcxmgoakvqzjb"
 
 [[keyboard.bindings]]
-action = "ScrollPageUp"
-key = "PageUp"
-mods = "Control"
-
-[[keyboard.bindings]]
 action = "ScrollPageDown"
-key = "PageDown"
-mods = "Control"
+key    = "PageDown"
+mods   = "Control"
 
 [[keyboard.bindings]]
-action = "ScrollLineUp"
-key = "ArrowUp"
-mods = "Control"
+action = "ScrollPageUp"
+key    = "PageUp"
+mods   = "Control"
 
 [[keyboard.bindings]]
 action = "ScrollLineDown"
-key = "ArrowDown"
-mods = "Control"
+key    = "ArrowDown"
+mods   = "Control"
+
+[[keyboard.bindings]]
+action = "ScrollLineUp"
+key    = "ArrowUp"
+mods   = "Control"
+
+[[keyboard.bindings]]
+action = "ScrollToBottom"
+key    = "End"
+mods   = "Control"
 
 [[keyboard.bindings]]
 action = "ScrollToTop"
@@ -63,6 +71,12 @@ key    = "Home"
 mods   = "Control"
 
 [[keyboard.bindings]]
-action = "ScrollToBottom"
-key    = "End"
-mods   = "Control"
+action = "ToggleViMode"
+key    = "Escape"
+mode   = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "SearchHistoryPrevious"
+key    = "N"
+mods   = "Shift"
+mode   = "Search"

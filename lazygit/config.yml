@@ -1,11 +1,10 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
 
 git:
-  paging:
-    # colorArg: always
-    externalDiffCommand: difft --color=always --display=inline
-    # pager: delta --dark --paging=never --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
-
+  pagers:
+    - # colorArg: always
+      externalDiffCommand: difft --color=always --display=inline
+      # pager: delta --dark --paging=never --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
 gui:
   theme:
     activeBorderColor:
@@ -27,16 +26,13 @@ gui:
       - '#cdd6f4'
     searchingActiveBorderColor:
       - '#f9e2af'
-
     inactiveViewSelectedLineBgColor:
       - '#1e1e2e'
     markedBaseCommitFgColor:
       - '#11111b'
     markedBaseCommitBgColor:
       - '#89dceb'
-
   authorColors:
     '*': '#b4befe'
-
   nerdFontsVersion: "3"
   showFileIcons: false

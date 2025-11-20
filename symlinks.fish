@@ -3,6 +3,7 @@
 set directories \
     alacritty/themes \
     bat/themes \
+    copyq/themes \
     delta \
     dunst \
     helix/themes \
@@ -18,7 +19,7 @@ set directories \
     superfile/theme \
     television/themes \
     warp-terminal/themes \
-    zellij
+    zellij/layouts
 
 for directory in $directories
     set -l path ~/.config/$directory/
@@ -30,11 +31,7 @@ end
 
 ln -sf ~/dev/me/dot-files/.gitconfig ~/
 
-ln -sf ~/dev/me/dot-files/.gtkrc-2.0 ~/
-
 ln -sf ~/dev/me/dot-files/.iex.exs ~/
-
-ln -sf ~/dev/me/dot-files/.xinitrc ~/
 
 ln -sf ~/dev/me/dot-files/.xprofile ~/
 
@@ -47,6 +44,8 @@ ln -sf ~/dev/me/dot-files/alacritty/catppuccin/*.toml ~/.config/alacritty/themes
 ln -sf ~/dev/me/dot-files/bat/config ~/.config/bat/
 
 ln -sf ~/dev/me/dot-files/bat/catppuccin/themes/*.tmTheme ~/.config/bat/themes/
+
+ln -sf ~/dev/me/dot-files/copyq/themes/catppuccin-mocha.ini ~/.config/copyq/themes/
 
 ln -sf ~/dev/me/dot-files/delta/delta.gitconfig ~/.config/delta/
 
@@ -80,9 +79,9 @@ ln -sf ~/dev/me/dot-files/ov/config.yaml ~/.config/ov/
 
 ln -sf ~/dev/me/dot-files/picom/picom.conf ~/.config/picom/
 
-ln -sf ~/dev/me/dot-files/polybar/launch.sh ~/.config/polybar/
-
 ln -sf ~/dev/me/dot-files/polybar/config.ini ~/.config/polybar/
+
+ln -sf ~/dev/me/dot-files/polybar/launch.sh ~/.config/polybar/
 
 ln -sf ~/dev/me/dot-files/polybar/catppuccin/themes/*.ini ~/.config/polybar/themes/
 
@@ -105,3 +104,5 @@ ln -sf ~/dev/me/dot-files/television/catppuccin/themes/*.toml ~/.config/televisi
 ln -sf ~/dev/me/dot-files/warp-terminal/catppuccin/themes/*.yml ~/.config/warp-terminal/themes/
 
 ln -sf ~/dev/me/dot-files/zellij/config.kdl ~/.config/zellij/
+
+ln -sf ~/dev/me/dot-files/zellij/layouts/*.kdl ~/.config/zellij/layouts/

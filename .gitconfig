@@ -7,8 +7,7 @@
 [core]
   autocrlf = input
   editor = hx
-  # pager = delta --pager='ov -F'
-  pager = delta
+  pager = delta --pager='ov -F'
 
 [pull]
   rebase = true
@@ -50,10 +49,10 @@
   ds = -c diff.external=difft show --ext-diff
   dd = -c diff.external=difft diff
 
-# [pager]
-#   diff = delta --features ov-diff
-#   log  = delta --features ov-log
-#   show = delta --pager='ov -F --header 3'
+[pager]
+  diff = delta --features ov-diff
+  log  = delta --features ov-log
+  show = delta --pager='ov -F --header 3'
 
 [credential "https://github.com"]
 	helper = 
