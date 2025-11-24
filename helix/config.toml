@@ -63,17 +63,17 @@ wrap-at-text-width = true
 wrap-indicator     = "↪"
 
 [editor.statusline]
-center = ["spacer", "spacer", "spacer", "spacer", "separator", "file-name", "file-modification-indicator"]
 left   = ["mode", "spinner", "selections", "primary-selection-length",
                  "position", "position-percentage", "total-line-numbers", "register"]
-right  = ["version-control"]
+center = ["separator", "file-name", "file-modification-indicator"]
+right  = ["version-control", "spacer"]
 
 separator = "󰚄"
 
 [editor.statusline.mode]
-insert = " 󱃱 "
-normal = "  "
-select = "  "
+insert = "󱃱 "
+normal = " "
+select = " "
 
 [editor.whitespace]
 render = "none"
