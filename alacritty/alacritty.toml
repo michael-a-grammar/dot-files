@@ -3,9 +3,6 @@ import = ["~/.config/alacritty/themes/catppuccin-mocha.toml",]
 [env]
 TERM = "alacritty"
 
-[shell]
-program = "/home/linuxbrew/.linuxbrew/bin/fish"
-
 [window]
 decorations       = "None"
 resize_increments = true

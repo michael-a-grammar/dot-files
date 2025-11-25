@@ -152,5 +152,3 @@ exec --no-startup-id slack
 exec --no-startup-id discord
 exec --no-startup-id emacs
 exec --no-startup-id keymapp
-
-exec_always --no-startup-id kontroll connect-any
