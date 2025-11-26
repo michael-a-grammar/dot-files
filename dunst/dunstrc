@@ -5,7 +5,7 @@ width                = 320
 height               = 320
 notification_limit   = 0
 origin               = top-right
-offset               = 15x15
+offset               = 40x40
 scale                = 0
 progress_bar         = false
 indicate_hidden      = yes
@@ -46,17 +46,17 @@ alignment            = left
 markup               = full
 
 [urgency_low]
-background = "#1e1e2e"
-foreground = "#cdd6f4"
+background = "#181825"
+foreground = "#181825"
 timeout    = 10
 
 [urgency_normal]
-background = "#1e1e2e"
+background = "#181825"
 foreground = "#cdd6f4"
 timeout    = 10
 
 [urgency_critical]
-background  = "#1e1e2e"
+background  = "#181825"
 foreground  = "#cdd6f4"
-frame_color = "#fab387"
+frame_color = "#94e2d5"
 timeout     = 10

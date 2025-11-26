@@ -68,16 +68,10 @@ for_window [window_role="GtkFileChooserDialog"] move position center, resize set
 
 bindsym $mod+Tab workspace back_and_forth
 
-bindsym $mod+slash exec --no-startup-id rofi -show window
+bindsym $mod+slash exec --no-startup-id fish -c rofi_window
 
-bindsym $mod+c exec --no-startup-id rofi-copyq
-bindsym $mod+d exec --no-startup-id rofi -show drun
-bindsym $mod+f fullscreen toggle
-bindsym $mod+h split h
+bindsym $mod+d exec --no-startup-id fish -c rofi_drun_run_filebrowser
 bindsym $mod+l exec --no-startup-id i3lock-fancy -f JetBrainsMono Nerd Font
-bindsym $mod+p layout toggle split
-bindsym $mod+s layout stacking
-bindsym $mod+t layout tabbed
 bindsym $mod+q exec --no-startup-id i3-nagbar -t warning -f "pango:JetBrainsMono Nerd Font 10" -m "Exit?" -B "    " "i3-msg exit" -B "    " "pkill i3-nagbar && i3lock-fancy -f JetBrainsMono Nerd Font" -B "    " "pkill i3-nagbar && reboot" -B "    " "pkill i3-nagbar && shutdown -h now"
 bindsym $mod+v exec --no-startup-id dunstctl history-pop
 bindsym $mod+w kill
@@ -137,6 +131,7 @@ client.placeholder      $overlay0  $mantle     $text      $overlay0   $overlay0
 
 client.background $base
 
+exec_always --no-startup-id xrandr --output HDMI-1-0 --mode 3440x1440
 exec_always --no-startup-id xrandr --output eDP-1 --off
 exec_always --no-startup-id dex --autostart --environment i3
 exec_always --no-startup-id xautolock -time 5 -locker "i3lock-fancy -f JetBrainsMono Nerd Font"
@@ -150,5 +145,3 @@ exec --no-startup-id alacritty
 exec --no-startup-id firefox
 exec --no-startup-id slack
 exec --no-startup-id discord
-exec --no-startup-id emacs
-exec --no-startup-id keymapp

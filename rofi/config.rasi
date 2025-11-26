@@ -3,7 +3,7 @@
 configuration {
   font: "JetBrainsMono Nerd Font 20";
 
-  show-icons: true;
+  show-icons: false;
   icon-theme: "papirus";
 
   window-format: "{t}";
@@ -46,7 +46,7 @@ configuration {
 
 window {
   width:        30%;
-  border:       2px;
+  border:       3px;
   border-color: @blue;
   padding:      5px;
 }
@@ -108,7 +108,7 @@ listview {
 element {
   background-color: @base;
   text-color:       @subtext1;
-  children:         [element-icon, element-text];
+  children:         [element-text];
 }
 
 element-icon {

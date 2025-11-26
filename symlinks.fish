@@ -33,8 +33,6 @@ ln -sf ~/dev/me/dot-files/.gitconfig ~/
 
 ln -sf ~/dev/me/dot-files/.iex.exs ~/
 
-ln -sf ~/dev/me/dot-files/.xprofile ~/
-
 ln -sf ~/dev/me/dot-files/.Xresources ~/
 
 ln -sf ~/dev/me/dot-files/alacritty/alacritty.toml ~/.config/alacritty/
@@ -85,7 +83,7 @@ ln -sf ~/dev/me/dot-files/polybar/launch.sh ~/.config/polybar/
 
 ln -sf ~/dev/me/dot-files/polybar/catppuccin/themes/*.ini ~/.config/polybar/themes/
 
-ln -sf ~/dev/me/dot-files/rofi/config.rasi ~/.config/rofi/
+ln -sf ~/dev/me/dot-files/rofi/**.rasi ~/.config/rofi/
 
 ln -sf ~/dev/me/dot-files/rofi/catppuccin/catppuccin-default.rasi ~/.config/rofi/themes/
 
