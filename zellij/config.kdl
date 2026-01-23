@@ -273,7 +273,7 @@ plugins {
     about          location="zellij:about"
 }
 
-load_plugins { }
+load_plugins {}
 
 on_force_close "quit"
 
@@ -288,10 +288,6 @@ auto_layout true
 default_layout "default"
 
 default_mode "locked"
-
-// layout_dir "/path/to/my/layout_dir"
-
-// theme_dir "/path/to/my/theme_dir"
 
  themes {
     catppuccin-mocha-update {

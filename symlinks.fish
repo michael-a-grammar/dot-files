@@ -96,3 +96,5 @@ ln -sf ~/dev/me/dot-files/television/catppuccin/themes/*.toml ~/.config/televisi
 ln -sf ~/dev/me/dot-files/zellij/config.kdl ~/.config/zellij/
 
 ln -sf ~/dev/me/dot-files/zellij/layouts/*.kdl ~/.config/zellij/layouts/
+
+ln -sf ~/dev/me/dot-files/zellij/plugins/*.wasm ~/.config/zellij/plugins/

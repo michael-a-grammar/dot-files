@@ -170,7 +170,7 @@ e = "file_picker_in_current_buffer_directory"
 "."     = "repeat_last_motion"
 "("     = "rotate_selection_contents_backward"
 ")"     = "rotate_selection_contents_forward"
-'*'     = 'search_selection'
+"*"     = "search_selection"
 "!"     = "shell_append_output"
 "|"     = "shell_pipe_to"
 "`"     = "switch_to_uppercase"
@@ -182,10 +182,16 @@ u = "earlier"
 x = "shrink_to_line_bounds"
 
 C = "copy_selection_on_prev_line"
-I = 'select_all_children'
+I = "select_all_children"
 J = "join_selections_space"
 K = "remove_selections"
 U = "later"
+
+[keys.normal.backspace.m]
+e = ["yank_to_clipboard",
+      ":sh zellij action move-focus right; zellij action write-chars $(xclip -o -selection clipboard); zellij action write 13; zellij action move-focus left"]
+
+r = [":sh zellij action move-focus right; zellij action write-chars recompile; zellij action write 13; zellij action move-focus left"]
 
 [keys.select.backspace]
 ":"     = "ensure_selections_forward"
@@ -196,7 +202,7 @@ U = "later"
 "."     = "repeat_last_motion"
 "("     = "rotate_selection_contents_backward"
 ")"     = "rotate_selection_contents_forward"
-'*'     = 'search_selection'
+"*"     = "search_selection"
 "!"     = "shell_append_output"
 "|"     = "shell_pipe_to"
 "`"     = "switch_to_uppercase"
@@ -208,7 +214,7 @@ u = "earlier"
 x = "shrink_to_line_bounds"
 
 C = "copy_selection_on_prev_line"
-I = 'select_all_children'
+I = "select_all_children"
 J = "join_selections_space"
 K = "remove_selections"
 U = "later"
@@ -226,10 +232,10 @@ s = "save_selection"
 x = "decrement"
 
 [keys.normal."'"]
-a = 'select_all_siblings'
+a = "select_all_siblings"
 z = ":config-open"
 
-E = 'select_all_children'
+E = "select_all_children"
 Z = ":config-reload"
 
 n = "select_prev_sibling"
@@ -238,10 +244,10 @@ i = "expand_selection"
 o = "select_next_sibling"
 
 [keys.select."'"]
-a = 'select_all_siblings'
+a = "select_all_siblings"
 z = ":config-open"
 
-E = 'select_all_children'
+E = "select_all_children"
 Z = ":config-reload"
 
 n = "select_prev_sibling"
