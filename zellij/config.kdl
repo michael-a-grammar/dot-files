@@ -14,7 +14,7 @@ keybinds clear-defaults=true {
     pane {
         bind "Ctrl p" { SwitchToMode "Normal"; }
 
-        bind "Enter" { NewPane;     SwitchToMode "Normal"; }
+        bind "Enter" { NewPane;     SwitchToMode "Locked"; }
         bind "Tab"   { SwitchFocus;                        }
 
         bind "c" { SwitchToMode "RenamePane"; PaneNameInput 0; }
@@ -38,7 +38,7 @@ keybinds clear-defaults=true {
         bind "]" { BreakPaneRight; SwitchToMode "Normal"; }
         bind "[" { BreakPaneLeft;  SwitchToMode "Normal"; }
 
-        bind "Enter" { NewTab;    SwitchToMode "Normal"; }
+        bind "Enter" { NewTab;    SwitchToMode "Locked"; }
         bind "Tab"   { ToggleTab;                        }
 
         bind "c" { SwitchToMode "RenameTab"; TabNameInput 0;        }
