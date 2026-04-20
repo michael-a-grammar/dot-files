@@ -41,7 +41,8 @@ sudo apt install -y build-essential \
 	zlib1g-dev \
 	fop \
 	m4 \
-	unzip
+	unzip \
+  tree-sitter-cli
 
 # homebrew
 if ! type brew >/dev/null; then

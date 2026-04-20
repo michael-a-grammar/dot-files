@@ -22,27 +22,21 @@
   diffFilter = delta --color-only
 
 [diff]
-  tool = nvimdiff
+  tool = nvim
 
-[difftool "nvimdiff"]
+[difftool "nvim"]
   cmd = nvim -d $LOCAL $REMOTE
-  prompt = true
-
-[difftool "vscode"]
-  cmd = code --wait --diff $LOCAL $REMOTE
-  prompt = true
+  prompt = false
 
 [merge]
   conflictstyle = diff3
   tool = nvim
 
 [mergetool "nvim"]
-  cmd = nvim -f -c Gdiffsplit! $MERGED
-  prompt = true
+  cmd = "nvim -d -c \"wincmd l\" -c \"norm ]c\" \"$LOCAL\" \"$MERGED\" \"$REMOTE\""
+  keepBackup = false
+  prompt = false
 
-[mergetool "vscode"]
-  cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
-  prompt = true
 
 [alias]
   dl = -c diff.external=difft log -p --ext-diff

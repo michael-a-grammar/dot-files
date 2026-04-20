@@ -7,21 +7,20 @@ function update
 
     rustup update
 
-    cargo install ast-grep
-    cargo install eza
-    cargo install stylua
-    cargo install tsql
-    cargo install vivid
+    cargo install --locked ast-grep
+    cargo install --locked eza
+    cargo install --locked stylua
+    cargo install --locked tsql
+    cargo install --locked vivid
 
     cargo install --locked bacon
 
-    cargo install --git https://github.com/neovide/neovide
+    cargo install --locked --git https://github.com/neovide/neovide
 
     pip install --upgrade pip
     pip install --upgrade gcalcli
     pip install --upgrade suite-py
 
-    asdf update
     asdf update --all
 
     curl 'https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip' -o '~/awscliv2.zip'

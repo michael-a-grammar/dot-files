@@ -17,7 +17,8 @@ set directories \
     rofi/themes \
     superfile/theme \
     television/themes \
-    zellij/layouts
+    zellij/layouts \
+    zellij/plugins
 
 for directory in $directories
     set -l path ~/.config/$directory/

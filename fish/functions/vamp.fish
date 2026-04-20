@@ -1,10 +1,7 @@
 function vamp
     stylua ~/dev/me/vamp/src
 
-    rm -rf ~/.config/nvim/lua/
-    rm -rf ~/.config/nvim/after/
+    rm -rf ~/.config/nvim/*
 
-    cp -r ~/dev/me/vamp/src/lua/ ~/.config/nvim/lua/
-    cp -r ~/dev/me/vamp/src/after/ ~/.config/nvim/after/
-    cp ~/dev/me/vamp/src/*.lua ~/.config/nvim/
+    cp -r ~/dev/me/vamp/src/* ~/.config/nvim/
 end

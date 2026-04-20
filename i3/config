@@ -48,7 +48,7 @@ focus_follows_mouse no
 smart_borders on
 smart_borders no_gaps
 
-# hide_edge_borders smart_no_gaps
+hide_edge_borders smart_no_gaps
 
 smart_gaps off
 

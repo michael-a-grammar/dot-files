@@ -94,6 +94,7 @@ j = "normal_mode"
 [keys.normal]
 C-i = "jump_forward"
 C-o = "jump_backward"
+C-p = "page_up"
 C-q = ":write-quit-all"
 
 D = ["move_char_left", "delete_selection"]
